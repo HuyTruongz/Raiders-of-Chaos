@@ -19,7 +19,7 @@ namespace hyhy.RaidersOfChaos
 
         public abstract bool IsMaxLevel();
 
-        public abstract void ToJson();
+        public abstract string ToJson();
 
     }
 
