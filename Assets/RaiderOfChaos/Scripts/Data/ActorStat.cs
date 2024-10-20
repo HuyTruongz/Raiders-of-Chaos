@@ -10,6 +10,7 @@ namespace hyhy.RaidersOfChaos
 #if UNITY_EDITOR
         [HideInInspector]
         public string id;
+        [HideInInspector]
         public Sprite thumb;
 #endif
         [Header("Base Stats : ")]
