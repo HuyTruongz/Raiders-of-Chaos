@@ -52,12 +52,12 @@ namespace hyhy.RaidersOfChaos.Editor
 
         public virtual void UpgradeToMax()
         {
-            m_target.UpGrade();
+            m_target.UpgradeTomax();
         }
 
         private void Upgrade()
         {
-            throw new NotImplementedException();
+            m_target.UpgradeCore();
         }
 
         public virtual void Load(string fileName)

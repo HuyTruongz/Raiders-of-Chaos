@@ -122,5 +122,10 @@ namespace hyhy.RaidersOfChaos
             if (fixY)
                 sp.transform.localScale = new Vector3(sp.transform.localScale.x + offsetX, (float)scaleY + offsetY, sp.transform.localScale.z);
         }
+
+        public static float UpgradeForm(int level, float factor)
+        {
+            return (level / factor) * 0.5f;
+        }
     }
 }

@@ -59,6 +59,11 @@ namespace hyhy.RaidersOfChaos
         {
 
         }
+        
+        public virtual void UpgradeCore()
+        {
+
+        }
 
         public virtual void UpgradeTomax()
         {

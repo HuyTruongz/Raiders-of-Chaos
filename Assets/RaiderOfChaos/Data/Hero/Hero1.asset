@@ -12,11 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d358d67309b9fb64db6251b1743d3707, type: 3}
   m_Name: Hero1
   m_EditorClassIdentifier: 
-  id: 1729430583545590821430
+  id: 172950839893835336062
   thumb: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
-  hp: 1
-  damage: 1
-  moveSpeed: 1
-  knockbackForce: 1
-  knockbackTime: 1
-  invincibleTime: 1
+  hp: 40
+  damage: 3
+  moveSpeed: 4.2
+  knockbackForce: 5
+  knockbackTime: 0.2
+  invincibleTime: 0.5
+  runSpeed: 5
+  atkSpeed: 1
+  atkRate: 0.1
+  dashRate: 0.1
+  dashDist: 3
+  ultiEnergy: 40
+  defense: 0.4
+  luck: 0.4
+  maxLevel: 50
+  level: 1
+  playerLevel: 1
+  xp: 0
+  lvUpxpRequired: 50
+  point: 0
+  xpUpRate: 20
+  atkSpeedRate: 0.1
+  hpUpRate: 10
+  dmgUpRate: 1.5
+  defUpRate: 1.5
+  luckUpRate: 0.3
+  pointUpRate: 5
+  pointRequired: 2
+  pointRequiredUp: 5
