@@ -55,7 +55,7 @@ namespace hyhy.RaidersOfChaos.Editor
             m_target.UpgradeTomax();
         }
 
-        private void Upgrade()
+        public virtual void Upgrade()
         {
             m_target.UpgradeCore();
         }

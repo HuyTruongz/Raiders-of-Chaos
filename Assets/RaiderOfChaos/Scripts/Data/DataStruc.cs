@@ -7,7 +7,7 @@ namespace hyhy.RaidersOfChaos
     public enum GameTag
     {
         Player,
-        Enemy
+        AI
     }
 
     public enum GameScene

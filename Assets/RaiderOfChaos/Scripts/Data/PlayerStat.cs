@@ -153,7 +153,7 @@ namespace hyhy.RaidersOfChaos
             if (!IsMaxLevel() && point >= pointRequired)
             {
                 UpgradeCore();
-
+                Save(GameData.Ins.curPlayerId);
                 if (Success != null)
                 {
                     Success.Invoke();
@@ -184,9 +184,7 @@ namespace hyhy.RaidersOfChaos
             atkSpeed = Mathf.Clamp(atkSpeed, 1, MaxAtkSpeed);
             damage = Mathf.Clamp(damage, 0, MaxHp);
             defense = Mathf.Clamp(defense, 0f, MaxDef);
-            luck = Mathf.Clamp(luck, 0, 1f);
-
-            //Save(GameData.Ins.curPlayerId);
+            luck = Mathf.Clamp(luck, 0, 1f);           
         }
 
         public override void UpgradeTomax()

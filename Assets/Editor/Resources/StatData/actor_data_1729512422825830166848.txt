@@ -1,0 +1,1 @@
+{"id":"1729512422825830166848","thumb":{"instanceID":25252},"hp":5.0,"damage":2.0,"moveSpeed":3.0,"knockbackForce":8.0,"knockbackTime":0.20000000298023225,"invincibleTime":0.3499999940395355,"atkTime":1.0,"minXpBonus":3.0,"maxXpBonus":10.0,"minEnegyBonus":5.0,"maxEnegyBonus":15.0,"hpUpRate":5.0,"dmgUpRate":5.0}
