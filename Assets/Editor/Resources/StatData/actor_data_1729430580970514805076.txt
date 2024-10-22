@@ -1,1 +1,0 @@
-{"id":"1729430580970514805076","thumb":{"instanceID":25150},"hp":1.0,"damage":1.0,"moveSpeed":1.0,"knockbackForce":1.0,"knockbackTime":1.0,"invincibleTime":1.0}
