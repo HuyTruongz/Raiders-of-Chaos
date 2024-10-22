@@ -46,7 +46,7 @@ namespace hyhy.RaidersOfChaos
 
         public float AtkSpeedUp
         {
-            get => Helper.UpgradeForm(level, 250) * atkSpeed;
+            get => Helper.UpgradeForm(level, 450) * atkSpeed;
         }
 
         public int PointReceiveUp
@@ -91,7 +91,7 @@ namespace hyhy.RaidersOfChaos
 
         public float MaxAtkSpeed
         {
-            get => MaxUpgradeValue(250, atkSpeed, atkSpeedRate);
+            get => MaxUpgradeValue(450, atkSpeed, atkSpeedRate);
         }
 
         public float MaxDef
@@ -190,8 +190,7 @@ namespace hyhy.RaidersOfChaos
         public override void UpgradeTomax()
         {
             while (level < maxLevel)
-            {
-                level++;
+            {              
                 UpgradeCore();
             }
         }
