@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b9f7bb7bee72444b09eb2bde8dd681, type: 3}
   m_Name: Enemy2
   m_EditorClassIdentifier: 
-  id: 172951235855894495328
-  thumb: {fileID: 1503777024, guid: 6063ed4fd4d2fc940aa83b08cfc39790, type: 3}
-  hp: 5
-  damage: 2
+  id: 1729591220349984602999
+  thumb: {fileID: -2024642943, guid: 641b529e4cee04749950489342e58bf9, type: 3}
+  hp: 8
+  damage: 3
   moveSpeed: 3
   knockbackForce: 8
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkTime: 1
-  minXpBonus: 3
-  maxXpBonus: 10
+  minXpBonus: 5
+  maxXpBonus: 12
   minEnegyBonus: 5
   maxEnegyBonus: 15
   hpUpRate: 5

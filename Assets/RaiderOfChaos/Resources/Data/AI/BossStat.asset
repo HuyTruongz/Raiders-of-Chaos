@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b9f7bb7bee72444b09eb2bde8dd681, type: 3}
   m_Name: BossStat
   m_EditorClassIdentifier: 
-  id: 172951235855894495328
-  thumb: {fileID: 1503777024, guid: 6063ed4fd4d2fc940aa83b08cfc39790, type: 3}
-  hp: 5
-  damage: 2
+  id: 172959051844130156860
+  thumb: {fileID: -1584678569, guid: c347c998743c2d24c9dd202b1f8539fa, type: 3}
+  hp: 60
+  damage: 8
   moveSpeed: 3
   knockbackForce: 8
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkTime: 1
-  minXpBonus: 3
-  maxXpBonus: 10
-  minEnegyBonus: 5
-  maxEnegyBonus: 15
-  hpUpRate: 5
-  dmgUpRate: 5
+  minXpBonus: 30
+  maxXpBonus: 50
+  minEnegyBonus: 10
+  maxEnegyBonus: 25
+  hpUpRate: 50
+  dmgUpRate: 30

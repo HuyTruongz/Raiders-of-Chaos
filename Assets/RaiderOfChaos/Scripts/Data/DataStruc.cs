@@ -6,8 +6,18 @@ namespace hyhy.RaidersOfChaos
 {
     public enum GameTag
     {
+        Vfx,
+        HpBar,
         Player,
         AI
+    }
+
+    public enum GameLayer
+    {
+        Player,
+        AI,
+        Invincible,
+        Dead
     }
 
     public enum GameScene
@@ -63,5 +73,13 @@ namespace hyhy.RaidersOfChaos
     {
         Normal,
         Dead
+    }
+
+    [System.Serializable]
+    public class Pool
+    {
+        public GameTag tag;
+        public GameObject prefab;
+        public int size;
     }
 }
