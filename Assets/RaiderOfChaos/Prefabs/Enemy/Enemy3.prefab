@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4780446659377620714}
   - component: {fileID: 8320439031672337393}
   m_Layer: 0
-  m_Name: Attack_0
+  m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
