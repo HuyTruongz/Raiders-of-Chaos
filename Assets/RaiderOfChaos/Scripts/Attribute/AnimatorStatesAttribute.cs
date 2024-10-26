@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
-namespace hyhy
+namespace hyhy.RaidersOfChaos.Editor
 {
     [System.Serializable]
     public class AnimState

@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class LayerListAttribute : PropertyAttribute
+namespace hyhy.RaidersOfChaos.Editor
 {
+    public class LayerListAttribute : PropertyAttribute
+    {
 
 
+    }
 }

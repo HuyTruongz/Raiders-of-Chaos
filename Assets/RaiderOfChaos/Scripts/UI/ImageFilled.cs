@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-namespace hyhy.RaidersofChaos
+namespace hyhy.RaidersOfChaos
 {
     public class ImageFilled : MonoBehaviour
     {
