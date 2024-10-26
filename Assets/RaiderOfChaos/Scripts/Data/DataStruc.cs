@@ -75,11 +75,4 @@ namespace hyhy.RaidersOfChaos
         Dead
     }
 
-    [System.Serializable]
-    public class Pool
-    {
-        public GameTag tag;
-        public GameObject prefab;
-        public int size;
-    }
 }
