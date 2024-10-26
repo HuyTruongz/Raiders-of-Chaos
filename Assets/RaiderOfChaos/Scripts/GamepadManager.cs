@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace hyhy.RaidersOfChaos
 {
-    public class GamepadManager : SingleTon<GamepadManager>
+    public class GamepadManager : Singleton<GamepadManager>
     {
         public Joystick joystick;
         private bool m_canMoveLeft;
@@ -26,7 +26,7 @@ namespace hyhy.RaidersOfChaos
 
         public override void Awake()
         {
-            MakeSingleTon(false);
+            MakeSingleton(false);
         }
 
         private void Update()

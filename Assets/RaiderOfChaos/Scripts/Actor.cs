@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,9 @@ namespace hyhy.RaidersOfChaos
         public ActorStat stat;
 
         [Header("Layers")]
-        public GameLayer AI;
-        public GameLayer Invincible;
-        public GameLayer Dead;
+        public GameLayer noramlLayer;
+        public GameLayer invincibleLayer;
+        public GameLayer deadLayer;
 
         [Header("Referenec: ")]
         [SerializeField]
@@ -73,7 +74,64 @@ namespace hyhy.RaidersOfChaos
 
         private void LateUpdate()
         {
-            
+
+        }
+
+        public virtual void Init()
+        {
+
+        }
+
+        public virtual void TakeDamaged(float dmg, Actor whoHit)
+        {
+            if (m_isInvincible || m_isKnockBack) return;
+
+            if (m_curHp > 0)
+            {
+                m_dmgTaked = dmg;
+                m_whoHit = whoHit;
+
+                m_curHp -= dmg;
+
+                if (m_curHp <= 0)
+                {
+                    m_curHp = 0;
+                    Dead();
+                }
+                KnockBack();
+            }
+        }
+
+        private void KnockBack()
+        {
+            if (m_isInvincible || m_isKnockBack || !gameObject.activeInHierarchy) return;
+
+            m_isKnockBack = true;
+            StartCoroutine(StopKnockBack(stat.knockbackTime));
+
+        }
+
+        protected IEnumerator StopKnockBack(float time)
+        {
+            yield return new WaitForSeconds(time);
+
+            m_isKnockBack = false;
+            m_isInvincible = true;
+            gameObject.layer = LayerMask.NameToLayer(invincibleLayer.ToString());
+            StartCoroutine(StopInvincible(stat.invincibleTime));
+        }
+
+        protected IEnumerator StopInvincible(float time)
+        {
+            yield return new WaitForSeconds(time);
+            m_isInvincible = false;
+            gameObject.layer = LayerMask.NameToLayer(noramlLayer.ToString());
+        }
+
+        private void Dead()
+        {
+            m_rb.velocity = Vector2.zero;
+            gameObject.layer = LayerMask.NameToLayer(deadLayer.ToString());
         }
     }
 }

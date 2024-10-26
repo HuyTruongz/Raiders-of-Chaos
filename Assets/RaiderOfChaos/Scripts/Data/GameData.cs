@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace hyhy.RaidersOfChaos
 {
-    public class GameData : SingleTon<GameData>
+    public class GameData : Singleton<GameData>
     {
         public int coin;
         public int curLevelId;

@@ -6,7 +6,7 @@ namespace hyhy.RaidersOfChaos
 {
     public enum GameTag
     {
-        Vfx,
+        VfxJump,
         HpBar,
         Player,
         AI
