@@ -6,18 +6,9 @@ namespace hyhy.RaidersOfChaos
 {
     public enum GameTag
     {
-        VfxJump,
-        HpBar,
+       
         Player,
-        AI
-    }
-
-    public enum GameLayer
-    {
-        Player,
-        AI,
-        Invincible,
-        Dead
+        Enemy
     }
 
     public enum GameScene
@@ -50,22 +41,25 @@ namespace hyhy.RaidersOfChaos
     public enum PlayerState
     {
         Idle,
+        Walk,
+        Run,
         Attack,
         Jump,
         DoubleJump,
+        Hit,
         Fall,
         Dead,
-        Ulti,
+        Ultimate,
         Dash
     }
 
-    public enum EnemyState
+    public enum AIState
     {
         Walk,
-        Idle,
+        Dash,
+        Ultimate,
         Attack,
         Dead,
-        Def,
         Hit
     }
 

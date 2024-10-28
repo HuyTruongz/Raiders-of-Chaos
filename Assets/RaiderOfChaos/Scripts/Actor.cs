@@ -12,9 +12,7 @@ namespace hyhy.RaidersOfChaos
         public ActorStat stat;
 
         [Header("Layers")]
-        public GameLayer noramlLayer;
-        public GameLayer invincibleLayer;
-        public GameLayer deadLayer;
+       
 
         [Header("Referenec: ")]
         [SerializeField]
@@ -117,7 +115,7 @@ namespace hyhy.RaidersOfChaos
 
             m_isKnockBack = false;
             m_isInvincible = true;
-            gameObject.layer = LayerMask.NameToLayer(invincibleLayer.ToString());
+            
             StartCoroutine(StopInvincible(stat.invincibleTime));
         }
 
@@ -125,13 +123,13 @@ namespace hyhy.RaidersOfChaos
         {
             yield return new WaitForSeconds(time);
             m_isInvincible = false;
-            gameObject.layer = LayerMask.NameToLayer(noramlLayer.ToString());
+           
         }
 
         private void Dead()
         {
             m_rb.velocity = Vector2.zero;
-            gameObject.layer = LayerMask.NameToLayer(deadLayer.ToString());
+           
         }
     }
 }
