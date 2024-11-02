@@ -20,10 +20,16 @@ MonoBehaviour:
   knockbackForce: 8
   knockbackTime: 0.2
   invincibleTime: 0.35
+  atkRate: 1
+  dashRate: 0.15
+  ultiRate: 0.05
   atkTime: 1
+  ultiTime: 5
+  dashTime: 4
   minXpBonus: 3
   maxXpBonus: 10
   minEnegyBonus: 5
   maxEnegyBonus: 15
   hpUpRate: 5
   dmgUpRate: 5
+  ultiUprate: 0.25
