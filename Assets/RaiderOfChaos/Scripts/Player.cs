@@ -104,10 +104,21 @@ namespace hyhy.RaidersOfChaos
             }
             else
             {
+                if (GamepadManager.Ins.CanAttack)
+                {
+                    if (!m_isAttacked)
+                    {
+                        m_isAttacked = true;
+                        ChangeState(PlayerState.Attack);
+                    }
+                }else if (GamepadManager.Ins.CanUlti && m_curEnergy >= m_curStat.ultiEnergy)
+                {
 
+                }
             }
 
             ReduceActionRate(ref m_isDashed,ref m_curDashRate,ref m_curStat.dashRate);
+            ReduceActionRate(ref m_isAttacked,ref m_curAttackRate,ref m_curStat.atkRate);
         }
 
         private void Move(Direction dir)
@@ -285,7 +296,10 @@ namespace hyhy.RaidersOfChaos
             Helper.PlayAnim(m_amin, PlayerState.Run.ToString());
         }
         private void Run_Exit() { }
-        private void Attack_Enter() { }
+        private void Attack_Enter()
+        {
+            ChangeStateDelay(PlayerState.Idle);
+        }
         private void Attack_Update()
         {
             Helper.PlayAnim(m_amin, PlayerState.Attack.ToString());
