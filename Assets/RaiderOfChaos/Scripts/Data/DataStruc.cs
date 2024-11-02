@@ -27,7 +27,7 @@ namespace hyhy.RaidersOfChaos
     public enum Direction
     {
         Left,
-        Right, Up, Down
+        Right, Top, Bottom
     }
 
     public enum GameState

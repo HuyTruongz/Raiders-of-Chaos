@@ -1,3 +1,5 @@
+using hyhy.RaidersOfChaos.Editor;
+using hyhy.SPM;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,15 +14,26 @@ namespace hyhy.RaidersOfChaos
         public ActorStat stat;
 
         [Header("Layers")]
-       
+        [LayerList]
+        public int normalLayer;
+        [LayerList]
+        public int invincibleLayer;
+        [LayerList]
+        public int deadLayer;
 
         [Header("Referenec: ")]
         [SerializeField]
         protected Animator m_amin;
         protected Rigidbody2D m_rb;
 
-        public Vector3 hpBar;
-        public Vector3 vfxJump;
+        [Header("Vfx: ")]
+        [PoolerKeys(target = PoolerTarget.NONE)]
+        public string healthBarPool;
+        public Vector3 hpBarOffset;
+        public Vector3 hpBarScale = Vector3.one;
+        public FlashVfx flashVfx;
+        [PoolerKeys(target = PoolerTarget.NONE)]
+        public string deadVfx;
 
         protected Actor m_whoHit;
 
@@ -32,6 +45,8 @@ namespace hyhy.RaidersOfChaos
         protected bool m_isFacingLeft;
         protected float m_curSpeed;
         protected float m_dmgTaked;
+
+        protected ImageFilled m_healthBar;
 
         public float CurHp
         {
@@ -72,7 +87,11 @@ namespace hyhy.RaidersOfChaos
 
         private void LateUpdate()
         {
-
+            if (m_healthBar)
+            {
+                FlipHpBarOffset();
+                m_healthBar.transform.position = transform.position + hpBarOffset;
+            }
         }
 
         public virtual void Init()
@@ -106,7 +125,26 @@ namespace hyhy.RaidersOfChaos
 
             m_isKnockBack = true;
             StartCoroutine(StopKnockBack(stat.knockbackTime));
+            if (flashVfx)
+            {
+                flashVfx.Flash(stat.invincibleTime);
+            }
+        }
 
+        protected void KnockBackMove(float yRate)
+        {
+            if(!m_whoHit) return;
+
+            Vector2 dir = m_whoHit.transform.position - transform.position;
+            dir.Normalize();
+            if(dir.x > 0)
+            {
+                m_rb.velocity = new Vector2(-stat.knockbackForce, yRate * stat.knockbackForce);
+            }
+            else
+            {
+                m_rb.velocity = new Vector2(stat.knockbackForce, yRate * stat.knockbackForce);
+            }
         }
 
         protected IEnumerator StopKnockBack(float time)
@@ -115,7 +153,7 @@ namespace hyhy.RaidersOfChaos
 
             m_isKnockBack = false;
             m_isInvincible = true;
-            
+            gameObject.layer = invincibleLayer;
             StartCoroutine(StopInvincible(stat.invincibleTime));
         }
 
@@ -123,13 +161,122 @@ namespace hyhy.RaidersOfChaos
         {
             yield return new WaitForSeconds(time);
             m_isInvincible = false;
-           
+            gameObject.layer = normalLayer;
         }
 
-        private void Dead()
+        protected virtual void Dead()
         {
             m_rb.velocity = Vector2.zero;
-           
+            if (m_healthBar)
+            {
+                m_healthBar.Show(false);
+            }
+
+            gameObject.layer = deadLayer;
+
+            PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfx, transform.position, Quaternion.identity);
+        }
+
+        public virtual void Dash()
+        {
+
+        }
+
+        protected void Flip(Direction dir)
+        {
+            switch (dir)
+            {
+                case Direction.Left:
+                    if (transform.localScale.x > 0)
+                    {
+                        transform.localScale = new Vector3(
+                            transform.localScale.x * -1,
+                            transform.localScale.y,
+                            transform.localScale.z);
+                        m_isFacingLeft = true;
+                    }
+                    break;
+                case Direction.Right:
+                    if (transform.localScale.x < 0)
+                    {
+                        transform.localScale = new Vector3(
+                            transform.localScale.x * -1,
+                            transform.localScale.y,
+                            transform.localScale.z);
+                        m_isFacingLeft = false;
+                    }
+                    break;
+                case Direction.Top:
+                    if (transform.localScale.y < 0)
+                    {
+                        transform.localScale = new Vector3(
+                            transform.localScale.x,
+                            transform.localScale.y * -1,
+                            transform.localScale.z);
+                    }
+                    break;
+                case Direction.Bottom:
+                    if (transform.localScale.y > 0)
+                    {
+                        transform.localScale = new Vector3(
+                            transform.localScale.x,
+                            transform.localScale.y * -1,
+                            transform.localScale.z);
+                    }
+                    break;
+            }
+        }
+
+        protected void ReduceActionRate(ref bool isActed,ref float curTime,ref float totalTime)
+        {
+            if (isActed)
+            {
+                curTime -= Time.deltaTime;
+                if(curTime <= 0)
+                {
+                    isActed = false;
+                    curTime = totalTime;
+                }
+            }
+        }
+
+        protected void CreateHealthBarUI()
+        {
+            GameObject hpBar = PoolersManager.Ins.Spawn(PoolerTarget.NONE, healthBarPool, transform.position, Quaternion.identity);
+            if (!hpBar) return;
+            hpBar.transform.localScale = hpBarScale;
+            m_healthBar = hpBar.GetComponent<ImageFilled>();
+
+            if(!m_healthBar) return;
+            m_healthBar.Show(true);
+            m_healthBar.UpdateValue(m_curHp, stat.hp);
+            m_healthBar.Root = transform;
+        }
+
+        protected void FlipHpBarOffset()
+        {
+            if (m_isFacingLeft)
+            {
+                if(hpBarOffset.x < 0)
+                {
+                    hpBarOffset = new Vector3(hpBarOffset.x * -1,hpBarOffset.y,hpBarOffset.z);
+                }
+            }
+            else
+            {
+                if (hpBarOffset.x > 0)
+                {
+                    hpBarOffset = new Vector3(hpBarOffset.x * -1, hpBarOffset.y, hpBarOffset.z);
+                }
+            }
+        }
+
+        protected virtual void OnDrawGizmos()
+        {
+            if (!string.IsNullOrEmpty(healthBarPool))
+            {
+                Gizmos.DrawIcon(transform.position + hpBarOffset, "HPBar_Icon.png", true);
+            }
         }
     }
 }
