@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7257778436752650284}
   - component: {fileID: 7581138550727179780}
   - component: {fileID: 7818249056393821780}
+  - component: {fileID: 494490825392902776}
   m_Layer: 0
   m_Name: Hero1
   m_TagString: Untagged
@@ -178,6 +179,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.48114133}
   m_EdgeRadius: 0
+--- !u!114 &494490825392902776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545273543035642832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03e95b1342aecc469a2f85903d79f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 1
+  stat: {fileID: 11400000, guid: a78dd431220c44a40aa12a1f569ab0eb, type: 2}
+  normalLayer: 0
+  invincibleLayer: 0
+  deadLayer: 0
+  m_amin: {fileID: 4887525480237914039}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfx: 
+  headCol: {fileID: 175563352642825239}
+  bodyCol: {fileID: 7257778436752650284}
+  deadCol: {fileID: 7818249056393821780}
 --- !u!1 &5151762969553458483
 GameObject:
   m_ObjectHideFlags: 0

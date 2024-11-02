@@ -12,6 +12,7 @@ namespace hyhy.RaidersOfChaos
         private bool m_canAttack;
         private bool m_canDash;
         private bool m_canUlti;
+        private bool m_canJump;
 
         private bool m_isStatic;
 
@@ -23,6 +24,7 @@ namespace hyhy.RaidersOfChaos
         public bool IsStatic { get => !m_canMoveLeft && !m_canMoveRight && !m_canAttack && !m_canDash
                 && !m_canUlti;
         }
+        public bool CanJump { get => m_canJump; set => m_canJump = value; }
 
         public override void Awake()
         {
@@ -40,6 +42,7 @@ namespace hyhy.RaidersOfChaos
                 m_canAttack = Input.GetMouseButtonDown(0);
                 m_canDash = Input.GetMouseButtonDown(1);
                 m_canUlti = verChecking < 0 ? true: false;
+                m_canJump = Input.GetKeyDown(KeyCode.Space);
             }
             else
             {

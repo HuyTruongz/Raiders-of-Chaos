@@ -17,6 +17,7 @@ namespace hyhy.RaidersOfChaos
         public float hp;
         public float damage;
         public float moveSpeed;
+        public float jumpForce;
         public float knockbackForce;
         public float knockbackTime;
         public float invincibleTime;

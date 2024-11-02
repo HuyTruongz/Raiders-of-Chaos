@@ -17,6 +17,7 @@ MonoBehaviour:
   hp: 50
   damage: 5
   moveSpeed: 4.2
+  jumpForce: 4
   knockbackForce: 5
   knockbackTime: 0.2
   invincibleTime: 0.5
