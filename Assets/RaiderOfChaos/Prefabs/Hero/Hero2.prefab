@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3225043930691558982}
   - component: {fileID: 3880405964549311141}
   - component: {fileID: 1134021144484397804}
+  - component: {fileID: 6788997984193133997}
   m_Layer: 0
   m_Name: Hero2
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1134021144484397804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +179,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0089431, y: 0.44998908}
   m_EdgeRadius: 0
+--- !u!114 &6788997984193133997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457108163615822297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03e95b1342aecc469a2f85903d79f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 1
+  stat: {fileID: 11400000, guid: 8a3f429ea51d4c24aae7903f33e3f0ca, type: 2}
+  normalLayer: 0
+  invincibleLayer: 0
+  deadLayer: 0
+  m_amin: {fileID: 9039041766105737367}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfx: 
+  headCol: {fileID: 930347334239896734}
+  bodyCol: {fileID: 3225043930691558982}
+  deadCol: {fileID: 1134021144484397804}
 --- !u!1 &8963880747160141743
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +216,7 @@ GameObject:
   - component: {fileID: 366995283151501222}
   - component: {fileID: 3605092057921573320}
   - component: {fileID: 9039041766105737367}
+  - component: {fileID: 8399827648609403665}
   m_Layer: 0
   m_Name: Graphic
   m_TagString: Untagged
@@ -284,3 +312,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8399827648609403665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963880747160141743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3804e5f1f896b1e418f20cb4ea3c8b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 6788997984193133997}

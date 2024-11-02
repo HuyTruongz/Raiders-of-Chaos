@@ -16,7 +16,7 @@ MonoBehaviour:
   thumb: {fileID: -1432174902, guid: 809500aaa8ef28f40a0fad56ad0916cf, type: 3}
   hp: 50
   damage: 5
-  moveSpeed: 4.2
+  moveSpeed: 4
   jumpForce: 4
   knockbackForce: 5
   knockbackTime: 0.2
@@ -25,7 +25,7 @@ MonoBehaviour:
   atkSpeed: 0.7
   atkRate: 0.1
   dashRate: 0.1
-  dashDist: 3
+  dashDist: 2.5
   ultiEnergy: 40
   defense: 1
   luck: 0.4

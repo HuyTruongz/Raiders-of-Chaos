@@ -16,16 +16,16 @@ MonoBehaviour:
   thumb: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
   hp: 40
   damage: 4
-  moveSpeed: 5
+  moveSpeed: 4
   jumpForce: 4
   knockbackForce: 5
   knockbackTime: 0.2
   invincibleTime: 0.5
-  runSpeed: 5
+  runSpeed: 6
   atkSpeed: 1.5
   atkRate: 0.1
   dashRate: 0.1
-  dashDist: 3
+  dashDist: 2.5
   ultiEnergy: 40
   defense: 0.4
   luck: 0.4

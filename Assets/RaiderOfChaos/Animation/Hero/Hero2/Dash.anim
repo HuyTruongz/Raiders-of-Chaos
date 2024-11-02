@@ -28,6 +28,8 @@ AnimationClip:
       value: {fileID: -1777589338, guid: de243d8482bbf4e4c86db36782f05e00, type: 3}
     - time: 0.3
       value: {fileID: 1112369954, guid: de243d8482bbf4e4c86db36782f05e00, type: 3}
+    - time: 0.4
+      value: {fileID: -1432174902, guid: 809500aaa8ef28f40a0fad56ad0916cf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,12 +56,13 @@ AnimationClip:
     - {fileID: 708462046, guid: de243d8482bbf4e4c86db36782f05e00, type: 3}
     - {fileID: -1777589338, guid: de243d8482bbf4e4c86db36782f05e00, type: 3}
     - {fileID: 1112369954, guid: de243d8482bbf4e4c86db36782f05e00, type: 3}
+    - {fileID: -1432174902, guid: 809500aaa8ef28f40a0fad56ad0916cf, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,4 +81,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.3
+    functionName: Dash
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -42,7 +42,7 @@ namespace hyhy.RaidersOfChaos
                 m_canAttack = Input.GetMouseButtonDown(0);
                 m_canDash = Input.GetMouseButtonDown(1);
                 m_canUlti = verChecking < 0 ? true: false;
-                m_canJump = Input.GetKeyDown(KeyCode.Space);
+                m_canJump = Input.GetKeyDown(KeyCode.Escape);
             }
             else
             {

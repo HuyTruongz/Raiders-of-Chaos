@@ -58,7 +58,12 @@ namespace hyhy.RaidersOfChaos
 
         private void Start()
         {
-            FSM_MethodGen.Gen<PlayerState>();
+            Init();
+        }
+
+        private void Update()
+        {
+            ActionHandle();
         }
 
         public override void Init()
@@ -66,7 +71,7 @@ namespace hyhy.RaidersOfChaos
             LoandStat();
 
             m_fsm.ChangeState(PlayerState.Idle);
-            ChangeState(PlayerState.Idle);
+            m_preState = PlayerState.Idle;
         }
 
         private void LoandStat()
@@ -86,7 +91,57 @@ namespace hyhy.RaidersOfChaos
 
         private void ActionHandle()
         {
+            if (IsAttacking || IsDashing || m_isKnockBack || IsDead) return;
 
+            if (GamepadManager.Ins.IsStatic)
+            {
+                m_curSpeed = 0f;
+                m_rb.velocity = new Vector2(m_curSpeed,m_rb.velocity.y);
+                if (!m_isInvincible)
+                {
+                    ChangeState(PlayerState.Idle);
+                }
+            }
+            else
+            {
+
+            }
+
+            ReduceActionRate(ref m_isDashed,ref m_curDashRate,ref m_curStat.dashRate);
+        }
+
+        private void Move(Direction dir)
+        {
+            if (m_isKnockBack) return;
+            if (dir == Direction.Left || dir == Direction.Right)
+            {
+                Flip(dir);
+
+                m_hozDir = dir == Direction.Left ? -1 : 1;
+
+                if (GameManager.Ins.setting.isOnMobile)
+                {
+                    m_rb.velocity = new Vector2(GamepadManager.Ins.joystick.xValue * m_curSpeed,m_rb.velocity.y);
+                }
+                else
+                {
+                    m_rb.velocity = new Vector2(m_hozDir * m_curSpeed, m_rb.velocity.y);
+                }
+            }
+        }
+
+        public override void Dash()
+        {
+            if (IsFacingLeft)
+            {
+                transform.position = new Vector3(transform.position.x - m_curStat.dashDist,
+                    transform.position.y,transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x + m_curStat.dashDist,
+                    transform.position.y, transform.position.z);
+            }
         }
 
         public void ChangeState(PlayerState state)
@@ -166,39 +221,125 @@ namespace hyhy.RaidersOfChaos
         }
 
         #region
-        private void Idle_Enter() { }
-        private void Idle_Update() { }
+        private void Idle_Enter()
+        {
+            ActiveCol(PlayerCollider.Normal);
+        }
+        private void Idle_Update()
+        {
+            if(GamepadManager.Ins.CanMoveLeft || GamepadManager.Ins.CanMoveRight)
+            {
+                ChangeState(PlayerState.Walk);
+            }
+
+            if (IsDead)
+            {
+                ChangeState(PlayerState.Dead);
+            }
+
+            Helper.PlayAnim(m_amin, PlayerState.Idle.ToString());
+        }
         private void Idle_Exit() { }
-        private void Walk_Enter() { }
-        private void Walk_Update() { }
+        private void Walk_Enter()
+        {
+            m_curSpeed = m_curStat.moveSpeed;
+        }
+        private void Walk_Update()
+        {
+            if (GamepadManager.Ins.CanDash)
+            {
+                if (!m_isDashed)
+                {
+                    m_isDashed = true;
+                    ChangeState(PlayerState.Dash);
+                }
+            }
+            else
+            {
+                m_curSpeed += Time.deltaTime * 1.5f;
+                m_curSpeed = Mathf.Clamp(m_curSpeed, m_curStat.moveSpeed, m_curStat.runSpeed);
+                if(m_curSpeed >= m_curStat.runSpeed)
+                {
+                    Helper.PlayAnim(m_amin, PlayerState.Run.ToString());
+                }
+                else
+                {
+                    Helper.PlayAnim(m_amin, PlayerState.Walk.ToString());
+                }
+            }
+
+            if (GamepadManager.Ins.CanMoveLeft)
+            {
+                Move(Direction.Left);
+            }else if (GamepadManager.Ins.CanMoveRight)
+            {
+                Move(Direction.Right);
+            }
+
+            
+        }
         private void Walk_Exit() { }
         private void Run_Enter() { }
-        private void Run_Update() { }
+        private void Run_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Run.ToString());
+        }
         private void Run_Exit() { }
         private void Attack_Enter() { }
-        private void Attack_Update() { }
+        private void Attack_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Attack.ToString());
+        }
         private void Attack_Exit() { }
         private void Jump_Enter() { }
-        private void Jump_Update() { }
+        private void Jump_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Jump.ToString());
+        }
         private void Jump_Exit() { }
         private void DoubleJump_Enter() { }
-        private void DoubleJump_Update() { }
+        private void DoubleJump_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.DoubleJump.ToString());
+        }
         private void DoubleJump_Exit() { }
         private void Hit_Enter() { }
-        private void Hit_Update() { }
+        private void Hit_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Hit.ToString());
+        }
         private void Hit_Exit() { }
         private void Fall_Enter() { }
-        private void Fall_Update() { }
+        private void Fall_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Fall.ToString());
+        }
         private void Fall_Exit() { }
         private void Dead_Enter() { }
-        private void Dead_Update() { }
+        private void Dead_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Dead.ToString());
+        }
         private void Dead_Exit() { }
         private void Ultimate_Enter() { }
-        private void Ultimate_Update() { }
+        private void Ultimate_Update()
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Ultimate.ToString());
+        }
         private void Ultimate_Exit() { }
-        private void Dash_Enter() { }
-        private void Dash_Update() { }
-        private void Dash_Exit() { }
+        private void Dash_Enter()
+        {
+            gameObject.layer = invincibleLayer;
+            ChangeStateDelay(PlayerState.Idle);
+        }
+        private void Dash_Update() 
+        {
+            Helper.PlayAnim(m_amin, PlayerState.Dash.ToString());
+        }
+        private void Dash_Exit() 
+        {
+            gameObject.layer = normalLayer;
+        }
 
         #endregion
     }
