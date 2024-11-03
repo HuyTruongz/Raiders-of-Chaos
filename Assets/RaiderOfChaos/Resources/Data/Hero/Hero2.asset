@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hero2
   m_EditorClassIdentifier: 
   id: 1729588366850287319914
-  thumb: {fileID: -1432174902, guid: 809500aaa8ef28f40a0fad56ad0916cf, type: 3}
+  thumb: {fileID: 649395297, guid: 4f9ff253b545e154697686ed538d9fac, type: 3}
   hp: 50
   damage: 5
   moveSpeed: 4
@@ -26,7 +26,7 @@ MonoBehaviour:
   atkRate: 0.1
   dashRate: 0.1
   dashDist: 2.5
-  ultiEnergy: 40
+  ultiEnergy: 20
   defense: 1
   luck: 0.4
   maxLevel: 50

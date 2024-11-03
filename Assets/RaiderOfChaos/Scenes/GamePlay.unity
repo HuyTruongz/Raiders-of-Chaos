@@ -305,6 +305,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &532337139 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9039041766105737367, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+  m_PrefabInstance: {fileID: 1124234608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &910179856
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero2
       objectReference: {fileID: 0}
+    - target: {fileID: 8399827648609403665, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+      propertyPath: m_anim
+      value: 
+      objectReference: {fileID: 532337139}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -113,12 +113,12 @@ namespace hyhy.RaidersOfChaos
                     }
                 }else if (GamepadManager.Ins.CanUlti && m_curEnergy >= m_curStat.ultiEnergy)
                 {
-
+                    ChangeState(PlayerState.Ultimate);
                 }
             }
 
             ReduceActionRate(ref m_isDashed,ref m_curDashRate,ref m_curStat.dashRate);
-            ReduceActionRate(ref m_isAttacked,ref m_curAttackRate,ref m_curStat.atkRate);
+            ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, ref m_curStat.atkRate);
         }
 
         private void Move(Direction dir)
@@ -304,7 +304,10 @@ namespace hyhy.RaidersOfChaos
         {
             Helper.PlayAnim(m_amin, PlayerState.Attack.ToString());
         }
-        private void Attack_Exit() { }
+        private void Attack_Exit()
+        {
+
+        }
         private void Jump_Enter() { }
         private void Jump_Update()
         {
@@ -317,30 +320,54 @@ namespace hyhy.RaidersOfChaos
             Helper.PlayAnim(m_amin, PlayerState.DoubleJump.ToString());
         }
         private void DoubleJump_Exit() { }
-        private void Hit_Enter() { }
+        private void Hit_Enter()
+        {
+            AIStat aiStat = (AIStat)m_whoHit.stat;
+            AddEnergy(aiStat.EnergyBonus / 5);
+        }
         private void Hit_Update()
         {
+            KnockBackMove(0.2f);
+            if (!m_isKnockBack)
+            {
+                ChangeState(PlayerState.Idle);
+            }
             Helper.PlayAnim(m_amin, PlayerState.Hit.ToString());
         }
-        private void Hit_Exit() { }
+        private void Hit_Exit()
+        {
+            
+        }
         private void Fall_Enter() { }
         private void Fall_Update()
         {
             Helper.PlayAnim(m_amin, PlayerState.Fall.ToString());
         }
         private void Fall_Exit() { }
-        private void Dead_Enter() { }
+        private void Dead_Enter()
+        {
+            ActiveCol(PlayerCollider.Dead);
+        }
         private void Dead_Update()
         {
+            gameObject.layer = deadLayer;
             Helper.PlayAnim(m_amin, PlayerState.Dead.ToString());
         }
         private void Dead_Exit() { }
-        private void Ultimate_Enter() { }
+        private void Ultimate_Enter() 
+        {
+            m_curEnergy -= m_curStat.ultiEnergy;
+            m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
+            ChangeStateDelay(PlayerState.Idle);
+        }
         private void Ultimate_Update()
         {
             Helper.PlayAnim(m_amin, PlayerState.Ultimate.ToString());
         }
-        private void Ultimate_Exit() { }
+        private void Ultimate_Exit()
+        {
+            m_curDmg = m_curStat.damage;
+        }
         private void Dash_Enter()
         {
             gameObject.layer = invincibleLayer;
