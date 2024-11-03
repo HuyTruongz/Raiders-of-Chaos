@@ -15,7 +15,7 @@ namespace hyhy.RaidersOfChaos
 
         private PlayerStat m_curStat;
         private StateMachine<PlayerState> m_fsm;
-        private PlayerState m_preState;
+        private PlayerState m_preVState;
         private int m_hozDir, m_verDir;
         private bool m_isDashed;
         private bool m_isAttacked;
@@ -29,7 +29,7 @@ namespace hyhy.RaidersOfChaos
 
         public bool IsDead
         {
-            get => m_fsm.State == PlayerState.Dead || m_preState == PlayerState.Dead;
+            get => m_fsm.State == PlayerState.Dead || m_preVState == PlayerState.Dead;
         }
 
         public bool IsAttacking
@@ -71,15 +71,12 @@ namespace hyhy.RaidersOfChaos
             LoandStat();
 
             m_fsm.ChangeState(PlayerState.Idle);
-            m_preState = PlayerState.Idle;
+            m_preVState = PlayerState.Idle;
         }
 
         private void LoandStat()
         {
-            if (m_curStat)
-            {
-                m_curStat.Load(GameData.Ins.curPlayerId);
-            }
+            if (!m_curStat) return;
 
             m_curSpeed = m_curStat.moveSpeed;
             m_curHp = m_curStat.hp;
@@ -157,7 +154,7 @@ namespace hyhy.RaidersOfChaos
 
         public void ChangeState(PlayerState state)
         {
-            m_preState = m_fsm.State;
+            m_preVState = m_fsm.State;
             m_fsm.ChangeState(state);
         }
 

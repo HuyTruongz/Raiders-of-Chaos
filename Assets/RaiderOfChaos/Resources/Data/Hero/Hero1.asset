@@ -26,7 +26,7 @@ MonoBehaviour:
   atkRate: 0.1
   dashRate: 0.1
   dashDist: 2.5
-  ultiEnergy: 20
+  ultiEnergy: 40
   defense: 0.4
   luck: 0.4
   maxLevel: 50
