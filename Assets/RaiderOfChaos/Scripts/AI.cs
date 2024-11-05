@@ -75,9 +75,17 @@ namespace hyhy.RaidersOfChaos
         private void ActionHandle()
         {
             ReduceActionRate(ref m_isAtked, ref m_curAtkTiem, m_curStat.atkTime);
+            ReduceActionRate(ref m_isDashed, ref m_curDashTime, m_curStat.dashTime);
+            ReduceActionRate(ref m_isUltied, ref m_curUltiTime, m_curStat.ultiTime);
             if (IsAtking || IsDashing || m_isKnockBack || IsDead || m_player.IsDead) return;
 
             GetTargetDir();
+
+            if(CanUlti && m_actionRate <= m_curStat.CurUltiRate && !m_isUltied)
+            {
+                m_isUltied = true;
+                ChangeState(AIState.Ultimate);
+            }
 
             if (CanAction)
             {
@@ -242,12 +250,21 @@ namespace hyhy.RaidersOfChaos
             gameObject.layer = normalLayer;
             GetActionRate();
         }
-        private void Ultimate_Enter() { }
+        private void Ultimate_Enter()
+        {
+            m_curDmg = m_curStat.CurDmg + m_curStat.CurDmg * 0.3f;
+            ChangeStateDelay(AIState.Walk);
+        }
         private void Ultimate_Update()
         {
+            m_rb.velocity = Vector3.zero;
             Helper.PlayAnim(m_amin, AIState.Ultimate.ToString());
         }
-        private void Ultimate_Exit() { }
+        private void Ultimate_Exit()
+        {
+            GetActionRate();
+            m_curDmg = m_curStat.CurDmg;
+        }
         private void Attack_Enter()
         {
             ChangeStateDelay(AIState.Walk);
