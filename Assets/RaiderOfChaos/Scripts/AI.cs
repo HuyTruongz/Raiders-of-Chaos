@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MonsterLove.StateMachine;
 using System;
+using static UnityEditor.PlayerSettings;
 
 namespace hyhy.RaidersOfChaos
 {
@@ -66,6 +67,33 @@ namespace hyhy.RaidersOfChaos
             Init();
         }
 
+        private void Update()
+        {
+            ActionHandle();
+        }
+
+        private void ActionHandle()
+        {
+            if (IsAtking || IsDashing || m_isKnockBack || IsDead || m_player.IsDead) return;
+
+            GetTargetDir();
+
+            if (CanAction)
+            {
+                ActionSwitch();
+            }
+
+            if (m_targetDir.x > 0)
+            {
+                Flip(Direction.Right);
+            }
+            else
+            {
+                Flip(Direction.Left);
+            }
+          
+        }
+
         protected void FSMInit(MonoBehaviour behaviour)
         {
             m_fsm = StateMachine<AIState>.Initialize(behaviour);
@@ -103,6 +131,23 @@ namespace hyhy.RaidersOfChaos
         private void GetActionRate()
         {
             m_actionRate = UnityEngine.Random.Range(0f, 1f);
+        }
+
+        protected void ActionSwitch()
+        {
+            if(m_actionRate <= m_curStat.dashRate && m_actionRate > m_curStat.CurUltiRate)
+            {
+                if (m_isDashed) return;
+
+                ChangeState(AIState.Dash);
+                m_isDashed = true;
+            }
+            else if(m_actionRate <= m_curStat.atkRate)
+            {
+                if(m_isAtked) return;
+                m_isAtked = true;
+                ChangeState(AIState.Attack);
+            }
         }
 
         public void ChangeState(AIState state)
@@ -191,5 +236,28 @@ namespace hyhy.RaidersOfChaos
         }
         private void Hit_Exit() { }
         #endregion
+
+        protected override void OnDrawGizmos()
+        {
+            base.OnDrawGizmos();
+
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position,
+                new Vector3(transform.position.x + ultiDist,
+                transform.position.y,
+                transform.position.z));
+
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position,
+                new Vector3(transform.position.x + dashDist,
+                transform.position.y,
+                transform.position.z));
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position,
+                new Vector3(transform.position.x + actionDist,
+                transform.position.y,
+                transform.position.z));
+        }
     }
 }

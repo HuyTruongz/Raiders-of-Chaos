@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2402290859407375874}
   - component: {fileID: 4270190782165139030}
   - component: {fileID: 4786493542888650789}
+  - component: {fileID: 2268350667607002927}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -202,3 +203,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2268350667607002927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667498308254760086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac02ea6c61164714f9ccc523ab0bb44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  stat: {fileID: 11400000, guid: 5ae0ae2f001e4f544a8cd718b6c4d26a, type: 2}
+  normalLayer: 0
+  invincibleLayer: 0
+  deadLayer: 0
+  m_amin: {fileID: 7576518410655090478}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfx: 
+  isBoss: 0
+  bossStat: {fileID: 0}
+  actionDist: 0
+  ultiDist: 0
+  dashDist: 0
