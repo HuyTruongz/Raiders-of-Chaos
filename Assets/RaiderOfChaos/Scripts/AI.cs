@@ -278,15 +278,22 @@ namespace hyhy.RaidersOfChaos
         {
             GetActionRate();
         }
-        private void Dead_Enter() { }
+        private void Dead_Enter()
+        {
+            m_player.AddEnergy(m_curStat.EnergyBonus);
+            m_player.AddXp(m_curStat.XpBonus);
+        }
         private void Dead_Update()
         {
+            gameObject.layer = deadLayer;
             Helper.PlayAnim(m_amin, AIState.Dead.ToString());
         }
         private void Dead_Exit() { }
         private void Hit_Enter() { }
         private void Hit_Update()
         {
+            m_rb.velocity = Vector3.zero;
+            KnockBackMove(0.15f);
             Helper.PlayAnim(m_amin, AIState.Hit.ToString());
         }
         private void Hit_Exit() { }
