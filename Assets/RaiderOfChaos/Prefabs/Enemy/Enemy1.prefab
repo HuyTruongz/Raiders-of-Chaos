@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8324743692759610637}
   - component: {fileID: 6611428792069581855}
   - component: {fileID: 7576518410655090478}
+  - component: {fileID: 7789309896508223223}
   m_Layer: 0
   m_Name: Graphic
   m_TagString: Untagged
@@ -106,6 +107,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7789309896508223223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820131230313113300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3804e5f1f896b1e418f20cb4ea3c8b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 2268350667607002927}
 --- !u!1 &8667498308254760086
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,9 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageTo: 0
   stat: {fileID: 11400000, guid: 5ae0ae2f001e4f544a8cd718b6c4d26a, type: 2}
-  normalLayer: 0
-  invincibleLayer: 0
-  deadLayer: 0
+  normalLayer: 7
+  invincibleLayer: 8
+  deadLayer: 9
   m_amin: {fileID: 7576518410655090478}
   healthBarPool: 
   hpBarOffset: {x: 0, y: 0, z: 0}
@@ -228,6 +242,6 @@ MonoBehaviour:
   deadVfx: 
   isBoss: 0
   bossStat: {fileID: 0}
-  actionDist: 0
-  ultiDist: 0
-  dashDist: 0
+  actionDist: 1.5
+  ultiDist: 4.5
+  dashDist: 1.5

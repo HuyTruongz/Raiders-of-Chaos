@@ -227,7 +227,7 @@ namespace hyhy.RaidersOfChaos
             }
         }
 
-        protected void ReduceActionRate(ref bool isActed,ref float curTime,ref float totalTime)
+        protected void ReduceActionRate(ref bool isActed,ref float curTime, float totalTime)
         {
             if (isActed)
             {

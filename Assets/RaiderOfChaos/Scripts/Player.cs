@@ -114,8 +114,8 @@ namespace hyhy.RaidersOfChaos
                 }
             }
 
-            ReduceActionRate(ref m_isDashed,ref m_curDashRate,ref m_curStat.dashRate);
-            ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, ref m_curStat.atkRate);
+            ReduceActionRate(ref m_isDashed,ref m_curDashRate,m_curStat.dashRate);
+            ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, m_curStat.atkRate);
         }
 
         private void Move(Direction dir)
@@ -295,6 +295,7 @@ namespace hyhy.RaidersOfChaos
         private void Run_Exit() { }
         private void Attack_Enter()
         {
+            m_rb.velocity = Vector3.zero;
             ChangeStateDelay(PlayerState.Idle);
         }
         private void Attack_Update()

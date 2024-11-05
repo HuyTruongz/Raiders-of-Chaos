@@ -74,6 +74,7 @@ namespace hyhy.RaidersOfChaos
 
         private void ActionHandle()
         {
+            ReduceActionRate(ref m_isAtked, ref m_curAtkTiem, m_curStat.atkTime);
             if (IsAtking || IsDashing || m_isKnockBack || IsDead || m_player.IsDead) return;
 
             GetTargetDir();
@@ -150,6 +151,20 @@ namespace hyhy.RaidersOfChaos
             }
         }
 
+        public override void Dash()
+        {
+            if (IsFacingLeft)
+            {
+                transform.position = new Vector3(transform.position.x - dashDist,
+                    transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x + dashDist,
+                    transform.position.y, transform.position.z);
+            }
+        }
+
         public void ChangeState(AIState state)
         {
             m_prevState = m_fsm.State;
@@ -202,27 +217,50 @@ namespace hyhy.RaidersOfChaos
         private void Walk_Enter() { }
         private void Walk_Update()
         {
+            if (m_isAtked)
+            {
+                m_rb.velocity = Vector2.zero;
+            }
+            else
+            {
+                m_rb.velocity = new Vector2(m_targetDir.x * m_curSpeed,m_rb.velocity.y);
+            }
             Helper.PlayAnim(m_amin, AIState.Walk.ToString());
         }
         private void Walk_Exit() { }
-        private void Dash_Enter() { }
+        private void Dash_Enter()
+        {
+            gameObject.layer = invincibleLayer;
+            ChangeStateDelay(AIState.Walk);
+        }
         private void Dash_Update()
         {
             Helper.PlayAnim(m_amin, AIState.Dash.ToString());
         }
-        private void Dash_Exit() { }
+        private void Dash_Exit()
+        {
+            gameObject.layer = normalLayer;
+            GetActionRate();
+        }
         private void Ultimate_Enter() { }
         private void Ultimate_Update()
         {
             Helper.PlayAnim(m_amin, AIState.Ultimate.ToString());
         }
         private void Ultimate_Exit() { }
-        private void Attack_Enter() { }
+        private void Attack_Enter()
+        {
+            ChangeStateDelay(AIState.Walk);
+        }
         private void Attack_Update()
         {
+            m_rb.velocity = Vector3.zero;
             Helper.PlayAnim(m_amin, AIState.Attack.ToString());
         }
-        private void Attack_Exit() { }
+        private void Attack_Exit() 
+        {
+            GetActionRate();
+        }
         private void Dead_Enter() { }
         private void Dead_Update()
         {
