@@ -7,11 +7,11 @@ namespace hyhy.RaidersOfChaos
     public class AnimEvent : MonoBehaviour
     {
         public Actor actor;
-        private GameObject weapon;
+        public GameObject weapon;
 
         private void Start()
         {
-            
+
         }
 
         public void Dash()
@@ -20,6 +20,24 @@ namespace hyhy.RaidersOfChaos
             {
                 actor.Dash();
             }
+        }
+
+        public void WeaponAttack()
+        {
+            if (!weapon) return;
+
+            IDamageCreater dmgCreater = weapon.GetComponent<IDamageCreater>();
+            if (dmgCreater != null)
+            {
+                dmgCreater.DealDamage();
+            }
+
+        }
+
+        public void Deactive()
+        {
+            if(!actor) return;
+            actor.gameObject.SetActive(false);
         }
     }
 }

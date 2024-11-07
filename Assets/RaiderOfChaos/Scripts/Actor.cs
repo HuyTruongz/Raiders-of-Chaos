@@ -35,6 +35,8 @@ namespace hyhy.RaidersOfChaos
         [PoolerKeys(target = PoolerTarget.NONE)]
         public string deadVfx;
 
+        public bool isEnemyFlight;
+
         protected Actor m_whoHit;
 
         protected float m_curHp;
@@ -137,13 +139,27 @@ namespace hyhy.RaidersOfChaos
 
             Vector2 dir = m_whoHit.transform.position - transform.position;
             dir.Normalize();
-            if(dir.x > 0)
+            if (!isEnemyFlight)
             {
-                m_rb.velocity = new Vector2(-stat.knockbackForce, yRate * stat.knockbackForce);
+                if (dir.x > 0)
+                {
+                    m_rb.velocity = new Vector2(-stat.knockbackForce, yRate * stat.knockbackForce);
+                }
+                else
+                {
+                    m_rb.velocity = new Vector2(stat.knockbackForce, yRate * stat.knockbackForce);
+                }
             }
             else
             {
-                m_rb.velocity = new Vector2(stat.knockbackForce, yRate * stat.knockbackForce);
+                if (dir.x > 0)
+                {
+                    m_rb.velocity = new Vector2(-stat.knockbackForce, m_rb.velocity.y);
+                }
+                else
+                {
+                    m_rb.velocity = new Vector2(stat.knockbackForce, m_rb.velocity.y);
+                }
             }
         }
 
@@ -174,7 +190,7 @@ namespace hyhy.RaidersOfChaos
 
             gameObject.layer = deadLayer;
 
-            PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfx, transform.position, Quaternion.identity);
+            //PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfx, transform.position, Quaternion.identity);
         }
 
         public virtual void Dash()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 633764069597859724}
   - component: {fileID: 5514424052607691491}
   - component: {fileID: 6393507797412793539}
+  - component: {fileID: 3920817129583796993}
   m_Layer: 0
   m_Name: Graphic
   m_TagString: Untagged
@@ -30,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8991697092447383927}
   m_Father: {fileID: 3774978989949892203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5514424052607691491
@@ -106,6 +108,76 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3920817129583796993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031234559110079172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3804e5f1f896b1e418f20cb4ea3c8b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 5720114120659993417}
+  weapon: {fileID: 2762053012191258252}
+--- !u!1 &2762053012191258252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8991697092447383927}
+  - component: {fileID: 7796459801299990319}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8991697092447383927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762053012191258252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633764069597859724}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7796459801299990319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762053012191258252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274e2319790db8841aa2281258511158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  atkRadius: 0.6
+  offset: {x: 0, y: 0, z: 0}
+  m_owner: {fileID: 5720114120659993417}
+  damage: 0
+  useCameraShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmpli: 0
 --- !u!1 &5487668822448527268
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +189,7 @@ GameObject:
   - component: {fileID: 3774978989949892203}
   - component: {fileID: 7900026018401773830}
   - component: {fileID: 6407512660764722357}
+  - component: {fileID: 5720114120659993417}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -166,7 +239,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &6407512660764722357
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,3 +275,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.05233693, y: 0}
   m_Size: {x: 0.56105983, y: 1.1046739}
   m_Direction: 0
+--- !u!114 &5720114120659993417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487668822448527268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac02ea6c61164714f9ccc523ab0bb44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  stat: {fileID: 11400000, guid: d6ea2732d15fd0c42b7ffe4e676223f7, type: 2}
+  normalLayer: 7
+  invincibleLayer: 8
+  deadLayer: 9
+  m_amin: {fileID: 6393507797412793539}
+  healthBarPool: 
+  hpBarOffset: {x: 0, y: 0, z: 0}
+  hpBarScale: {x: 1, y: 1, z: 1}
+  flashVfx: {fileID: 0}
+  deadVfx: 
+  isEnemyFlight: 0
+  isBoss: 0
+  bossStat: {fileID: 11400000, guid: 5708e0a669297364ba1d899ff1b9dc3c, type: 2}
+  actionDist: 1.2
+  ultiDist: 4.5
+  dashDist: 1.5

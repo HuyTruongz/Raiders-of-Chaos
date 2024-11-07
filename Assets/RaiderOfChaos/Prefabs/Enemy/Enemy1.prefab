@@ -1,5 +1,61 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1571024994371086170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2077583946375241239}
+  - component: {fileID: 5249528038225574988}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2077583946375241239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571024994371086170}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8324743692759610637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5249528038225574988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571024994371086170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274e2319790db8841aa2281258511158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  atkRadius: 0
+  offset: {x: 0, y: 0, z: 0}
+  m_owner: {fileID: 0}
+  damage: 0
+  useCameraShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmpli: 0
 --- !u!1 &4820131230313113300
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +87,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2077583946375241239}
   m_Father: {fileID: 2402290859407375874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6611428792069581855
@@ -120,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 2268350667607002927}
+  weapon: {fileID: 0}
 --- !u!1 &8667498308254760086
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,9 +190,9 @@ GameObject:
   - component: {fileID: 4270190782165139030}
   - component: {fileID: 4786493542888650789}
   - component: {fileID: 2268350667607002927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +274,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2268350667607002927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +298,9 @@ MonoBehaviour:
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 0}
   deadVfx: 
+  isEnemyFlight: 1
   isBoss: 0
-  bossStat: {fileID: 0}
-  actionDist: 1.5
+  bossStat: {fileID: 11400000, guid: 5708e0a669297364ba1d899ff1b9dc3c, type: 2}
+  actionDist: 4
   ultiDist: 4.5
   dashDist: 1.5

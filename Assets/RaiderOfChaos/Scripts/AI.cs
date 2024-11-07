@@ -294,6 +294,10 @@ namespace hyhy.RaidersOfChaos
         {
             m_rb.velocity = Vector3.zero;
             KnockBackMove(0.15f);
+            if (!m_isKnockBack)
+            {
+                ChangeState(AIState.Walk);
+            }
             Helper.PlayAnim(m_amin, AIState.Hit.ToString());
         }
         private void Hit_Exit() { }

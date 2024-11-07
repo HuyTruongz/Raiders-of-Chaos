@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1729588366850287319914
   thumb: {fileID: 649395297, guid: 4f9ff253b545e154697686ed538d9fac, type: 3}
   hp: 50
-  damage: 5
+  damage: 4
   moveSpeed: 4
   jumpForce: 4
   knockbackForce: 5
