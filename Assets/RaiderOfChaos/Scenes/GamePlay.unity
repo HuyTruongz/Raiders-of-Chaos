@@ -358,6 +358,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero2
       objectReference: {fileID: 0}
+    - target: {fileID: 6788997984193133997, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+      propertyPath: deadVfx
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788997984193133997, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+      propertyPath: healthBarPool
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788997984193133997, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+      propertyPath: isEnemyFlight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -615,6 +627,14 @@ PrefabInstance:
     - target: {fileID: 5487668822448527268, guid: 2487370327d2d494f8541410752dcc33, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720114120659993417, guid: 2487370327d2d494f8541410752dcc33, type: 3}
+      propertyPath: deadVfx
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720114120659993417, guid: 2487370327d2d494f8541410752dcc33, type: 3}
+      propertyPath: healthBarPool
+      value: None
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

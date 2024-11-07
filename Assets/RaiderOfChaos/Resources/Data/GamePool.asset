@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ad8f60e36ec3447b4cc483c3181923, type: 3}
+  m_Name: GamePool
+  m_EditorClassIdentifier: 
+  id: 1730978887:744091:569133
+  target: 0
+  categories:
+  - name: Projectile Normal
+    id: 1730978899:136980:451430
+  - name: Ultimate
+    id: 1730978936:192876:244936
+  - name: Enemy
+    id: 1730978942:158535:575595
+  - name: UI
+    id: 1730978949:421933:265789
+  - name: Collectable
+    id: 1730978955:912263:339593
+  - name: Vfx
+    id: 1730978964:712736:476852
+  - name: Ulti Weapon
+    id: 1730978968:686151:556758
+  pools:
+  - poolName: BulletEnemy1
+    id: 1730979055:887131:718611
+    prefab: {fileID: 8504446654307289844, guid: ed50250dbefdb8741ab93edc2a4ef508, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978899:136980:451430
+  - poolName: BulletHero1
+    id: 1730979074:367236:660914
+    prefab: {fileID: 4630321888226969730, guid: 2ca27c81e8113034ba879ec6d1bcfff7, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978899:136980:451430
+  - poolName: UltiEnemy1
+    id: 1730979143:751579:984081
+    prefab: {fileID: 4638738926047753094, guid: 9c9c92c7321f6ba4c846f7d8d39e847c, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: UltiEnemy2
+    id: 1730979161:447083:813434
+    prefab: {fileID: 7252237087229325489, guid: 53ebcaabcbfeac548a0044225ce8edca, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: UltiEnemy3
+    id: 1730979168:659123:403890
+    prefab: {fileID: 8290844503596844897, guid: b88429331eb42f84490612014039bfb0, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: UltiEnemy4
+    id: 1730979175:374848:782820
+    prefab: {fileID: 3010946155089409756, guid: e46e51e6fa915e94c836dca43afef931, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: UltimateHero1
+    id: 1730979184:886764:815157
+    prefab: {fileID: 9200393666780070297, guid: fd3d3056920dca34f89afee4dd33d3ad, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: UltimateHero2
+    id: 1730979251:465292:561518
+    prefab: {fileID: 2053508407364223364, guid: 13d3b46621ddea241a6621434241e5a9, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978936:192876:244936
+  - poolName: Enemy1
+    id: 1730979265:581326:4040
+    prefab: {fileID: 8667498308254760086, guid: b510d9a511b36294998ae77f1cceda96, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978942:158535:575595
+  - poolName: Enemy2
+    id: 1730979274:579744:75587
+    prefab: {fileID: 5487668822448527268, guid: 2487370327d2d494f8541410752dcc33, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978942:158535:575595
+  - poolName: Enemy3
+    id: 1730979278:274407:140011
+    prefab: {fileID: 3978743827531864223, guid: 7dbf6f4cdee18fe43a62b65a2442ba71, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978942:158535:575595
+  - poolName: Enemy4
+    id: 1730979282:616074:318962
+    prefab: {fileID: 7987861187358319420, guid: bb34f164a002c3c4cbc3b8399d1829d8, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978942:158535:575595
+  - poolName: Coin
+    id: 1730979384:464336:459528
+    prefab: {fileID: 5508118203143711893, guid: 7cb5a9df876862c468dc887ff21c2b0d, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978955:912263:339593
+  - poolName: Dimond
+    id: 1730979389:726669:760796
+    prefab: {fileID: 1988198055950008693, guid: 9523f81f96f8b09478e6dc2886512a3c, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978955:912263:339593
+  - poolName: Hp
+    id: 1730979404:396031:60585
+    prefab: {fileID: 2337746583914808010, guid: 1ca57c773de26d747b208fae6a4b87f5, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978955:912263:339593
+  - poolName: Arrow
+    id: 1730979442:808321:206744
+    prefab: {fileID: 7453343235426570376, guid: 437fd604d6fa10b46ba2adafab93fd6f, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978968:686151:556758
+  - poolName: UltiHero2Luck
+    id: 1730979476:760828:24423
+    prefab: {fileID: 8470244293681111155, guid: 637f14284218896408f5b3f606373114, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978968:686151:556758
+  - poolName: ExplosionVfx
+    id: 1730979505:792271:487384
+    prefab: {fileID: 2902496958987131668, guid: 01c99e2548f553c40aaf1d375eb0518b, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978964:712736:476852
+  - poolName: SoulExplosion
+    id: 1730979524:470811:262343
+    prefab: {fileID: 1074689663800542, guid: 1850d2201f2d55543a723f7f0645b605, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978964:712736:476852
