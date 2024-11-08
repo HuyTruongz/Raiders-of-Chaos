@@ -9,7 +9,7 @@ namespace hyhy.RaidersOfChaos
         [Range(0f, 1f)]
         public float rate;
 
-        private Actor m_owner;
+        protected Actor m_owner;
 
         public Actor Owner { get => m_owner; set => m_owner = value; }
 

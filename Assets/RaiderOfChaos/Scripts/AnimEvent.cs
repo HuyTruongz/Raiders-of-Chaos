@@ -6,25 +6,34 @@ namespace hyhy.RaidersOfChaos
 {
     public class AnimEvent : MonoBehaviour
     {
-        public Actor actor;
+        public Actor owner;
         public GameObject weapon;
+        public UltiManager ultiMng;
 
         private void Start()
         {
+           if(!ultiMng || !owner) return;
 
+           ultiMng.Owner = owner;
         }
 
         public void Dash()
         {
-            if (actor)
+            if (owner)
             {
-                actor.Dash();
+                owner.Dash();
             }
         }
 
         public void WeaponAttack()
         {
             if (!weapon) return;
+
+            UltimateController ultiCtr = weapon.GetComponent<UltimateController>();
+            if (ultiCtr)
+            {
+                ultiCtr.Owner = owner;
+            }
 
             IDamageCreater dmgCreater = weapon.GetComponent<IDamageCreater>();
             if (dmgCreater != null)
@@ -34,10 +43,16 @@ namespace hyhy.RaidersOfChaos
 
         }
 
+        public void UltiTrigger()
+        {
+            if(!ultiMng) return;
+            ultiMng.UltiTrigger();
+        }
+
         public void Deactive()
         {
-            if(!actor) return;
-            actor.gameObject.SetActive(false);
+            if(!owner) return;
+            owner.gameObject.SetActive(false);
         }
     }
 }

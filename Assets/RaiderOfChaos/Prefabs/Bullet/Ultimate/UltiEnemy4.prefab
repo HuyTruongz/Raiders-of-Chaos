@@ -93,6 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6166516414774942900}
+  - component: {fileID: -5293181911917102113}
+  - component: {fileID: -7232320659347170397}
   m_Layer: 0
   m_Name: UltiEnemy4
   m_TagString: Untagged
@@ -116,3 +118,36 @@ Transform:
   - {fileID: 6925503380148176682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5293181911917102113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010946155089409756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599c363c88846074ca00ce6483e4169d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTo: 0
+  speed: 0
+  damage: 0
+  deactiveWhenHitted: 0
+  bodyHitPool: None
+  owner: {fileID: 0}
+--- !u!114 &-7232320659347170397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010946155089409756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07640ef684723e64f97b2dd2e9d8beb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableOnly: 1
+  delay: 10
+  isOverride: 0
