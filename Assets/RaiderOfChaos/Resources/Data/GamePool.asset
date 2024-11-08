@@ -144,3 +144,9 @@ MonoBehaviour:
     startingParent: {fileID: 0}
     startingQuantity: 0
     category: 1730978964:712736:476852
+  - poolName: HealThBar
+    id: 1731067397:873657:619595
+    prefab: {fileID: 6032750631979171070, guid: 25d3135d39722704185c701dfc88da0f, type: 3}
+    startingParent: {fileID: 0}
+    startingQuantity: 0
+    category: 1730978949:421933:265789

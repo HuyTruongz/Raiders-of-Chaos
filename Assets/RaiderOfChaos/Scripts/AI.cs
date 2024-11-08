@@ -70,6 +70,11 @@ namespace hyhy.RaidersOfChaos
         private void Update()
         {
             ActionHandle();
+
+            if (m_healthBar)
+            {
+                m_healthBar.UpdateValue(m_curHp,m_curStat.CurHp);
+            }
         }
 
         private void ActionHandle()
@@ -133,7 +138,7 @@ namespace hyhy.RaidersOfChaos
             GetActionRate();
             m_fsm.ChangeState(AIState.Walk);
             m_prevState = m_fsm.State;
-
+            gameObject.layer = normalLayer;
             //CreateHealthBarUI();
         }
 

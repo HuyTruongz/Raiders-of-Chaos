@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3804e5f1f896b1e418f20cb4ea3c8b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 5720114120659993417}
+  owner: {fileID: 5919869127260257697}
   weapon: {fileID: 2762053012191258252}
   ultiMng: {fileID: 0}
 --- !u!1 &2762053012191258252
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Bits: 64
   atkRadius: 0.4
   offset: {x: 0, y: 0, z: 0}
-  m_owner: {fileID: 5720114120659993417}
+  m_owner: {fileID: 0}
   damage: 0
   useCameraShake: 0
   shakeDur: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 3774978989949892203}
   - component: {fileID: 7900026018401773830}
   - component: {fileID: 6407512660764722357}
-  - component: {fileID: 5720114120659993417}
+  - component: {fileID: 5919869127260257697}
   m_Layer: 7
   m_Name: Enemy2
   m_TagString: Enemy
@@ -276,7 +276,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.05233693, y: 0}
   m_Size: {x: 0.56105983, y: 1.1046739}
   m_Direction: 0
---- !u!114 &5720114120659993417
+--- !u!114 &5919869127260257697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,14 +294,14 @@ MonoBehaviour:
   invincibleLayer: 8
   deadLayer: 9
   m_amin: {fileID: 6393507797412793539}
-  healthBarPool: None
+  healthBarPool: 1731067397:873657:619595
   hpBarOffset: {x: 0, y: 0, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 0}
-  deadVfx: None
+  deadVfx: 1730979524:470811:262343
   isEnemyFlight: 0
   isBoss: 0
   bossStat: {fileID: 11400000, guid: 5708e0a669297364ba1d899ff1b9dc3c, type: 2}
-  actionDist: 1.2
+  actionDist: 1.5
   ultiDist: 4.5
-  dashDist: 1.5
+  dashDist: 4

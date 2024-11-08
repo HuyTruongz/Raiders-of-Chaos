@@ -190,7 +190,7 @@ namespace hyhy.RaidersOfChaos
 
             gameObject.layer = deadLayer;
 
-            //PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfx, transform.position, Quaternion.identity);
+            PoolersManager.Ins.Spawn(PoolerTarget.NONE, deadVfx, transform.position, Quaternion.identity);
         }
 
         public virtual void Dash()
@@ -258,7 +258,8 @@ namespace hyhy.RaidersOfChaos
 
         protected void CreateHealthBarUI()
         {
-            GameObject hpBar = PoolersManager.Ins.Spawn(PoolerTarget.NONE, healthBarPool, transform.position, Quaternion.identity);
+            GameObject hpBar = PoolersManager.Ins.Spawn(PoolerTarget.NONE, healthBarPool, transform.position
+               , Quaternion.identity);
             if (!hpBar) return;
             hpBar.transform.localScale = hpBarScale;
             m_healthBar = hpBar.GetComponent<ImageFilled>();
