@@ -152,10 +152,10 @@ TextureImporter:
       name: 632_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 69
-        width: 52
-        height: 49
+        x: 258
+        y: 70
+        width: 58
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,6 +165,90 @@ TextureImporter:
       bones: []
       spriteID: 3cdc61d8de1f09941a7358f4f8726e7d
       internalID: -385633208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 632_1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 70
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61292c9a50b5f604a8852178db52b65f
+      internalID: -5113236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 632_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 70
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1d28f81b48b4446a10e6468da50c25
+      internalID: -628358754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 632_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 70
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b24113e48246546b7a1f1e02640f0c
+      internalID: 83502270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 632_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 70
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e04e3c529151e4a80a1bc3036afb4a
+      internalID: -2035340702
       vertices: []
       indices: 
       edges: []
@@ -181,6 +265,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       632_0: -385633208
+      632_1: -5113236
+      632_2: -628358754
+      632_3: 83502270
+      632_4: -2035340702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -155,9 +155,9 @@ TextureImporter:
         x: 378
         y: 197
         width: 70
-        height: 46
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,6 +165,69 @@ TextureImporter:
       bones: []
       spriteID: 6463dd5afce1f7547a7b9654eb13ab08
       internalID: 877192924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 589_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 197
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7faef90c8090048a5f450dd672d730
+      internalID: 761222776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 589_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 197
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb36127477e1fe43987f2abe3838b84
+      internalID: -6979515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 589_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 197
+        width: 70
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d17258e858d994ea75ab6d211946f7
+      internalID: -503148491
       vertices: []
       indices: 
       edges: []
@@ -181,6 +244,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       589_0: 877192924
+      589_1: 761222776
+      589_2: -6979515
+      589_3: -503148491
+      589_4: 1152848735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

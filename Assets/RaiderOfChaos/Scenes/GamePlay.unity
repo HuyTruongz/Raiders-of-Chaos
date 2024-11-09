@@ -713,29 +713,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3920817129583796993, guid: 2487370327d2d494f8541410752dcc33, type: 3}
-      propertyPath: owner
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5487668822448527268, guid: 2487370327d2d494f8541410752dcc33, type: 3}
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
-    - target: {fileID: 5919869127260257697, guid: 2487370327d2d494f8541410752dcc33, type: 3}
-      propertyPath: dashDist
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919869127260257697, guid: 2487370327d2d494f8541410752dcc33, type: 3}
-      propertyPath: ultiDist
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919869127260257697, guid: 2487370327d2d494f8541410752dcc33, type: 3}
-      propertyPath: actionDist
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7796459801299990319, guid: 2487370327d2d494f8541410752dcc33, type: 3}
-      propertyPath: m_owner
-      value: 
+    - target: {fileID: 9109260463116640508, guid: 2487370327d2d494f8541410752dcc33, type: 3}
+      propertyPath: rate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

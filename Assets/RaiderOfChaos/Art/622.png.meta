@@ -153,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 322
-        y: 269
+        y: 265
         width: 57
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,6 +165,90 @@ TextureImporter:
       bones: []
       spriteID: 298469cb7249e764c9288a414d02aef4
       internalID: 137252389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 622_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 265
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17da422d162627540a8bd1464b38ee2b
+      internalID: 1848477992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 622_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 265
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f54bb420ecb284882c5f45851f30bf
+      internalID: -2133935827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 622_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 265
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1725c56a66f9ac546a01efcd24154d93
+      internalID: -357401433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 622_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 265
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ad103209c9d4842a4d1363028f43ca
+      internalID: 2004031769
       vertices: []
       indices: 
       edges: []
@@ -181,6 +265,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       622_0: 137252389
+      622_1: 1848477992
+      622_2: -2133935827
+      622_3: -357401433
+      622_4: 2004031769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

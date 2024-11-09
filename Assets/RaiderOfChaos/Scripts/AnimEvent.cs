@@ -54,5 +54,10 @@ namespace hyhy.RaidersOfChaos
             if(!owner) return;
             owner.gameObject.SetActive(false);
         }
+
+        public void PlayFootstepSound()
+        {
+
+        }
     }
 }

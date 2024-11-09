@@ -17,12 +17,13 @@ MonoBehaviour:
   hp: 8
   damage: 3
   moveSpeed: 3
+  jumpForce: 0
   knockbackForce: 8
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkRate: 1
   dashRate: 0.15
-  ultiRate: 0.03
+  ultiRate: 1
   atkTime: 1
   ultiTime: 5
   dashTime: 4
