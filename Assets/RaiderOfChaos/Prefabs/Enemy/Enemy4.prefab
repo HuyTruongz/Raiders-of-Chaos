@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16451a1088bb26c44b20e17673dc4249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultiCtrl: []
+  ultiCtrl:
+  - {fileID: 8721915199917866499}
 --- !u!114 &8721915199917866499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,9 +60,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 0
-  projectilePool: None
-  speed: 0
-  firePoint: {fileID: 0}
+  projectilePool: 1730979175:374848:782820
+  speed: 7
+  firePoint: {fileID: 6309464252601733159}
 --- !u!1 &2901432277405310977
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564944097924816212}
   - component: {fileID: 1253012637814019817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +132,7 @@ GameObject:
   - component: {fileID: 2167043737882290930}
   - component: {fileID: 8747755486243371808}
   - component: {fileID: 4922902861062926272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 4928003594338019540}
-  weapon: {fileID: 0}
-  ultiMng: {fileID: 0}
+  weapon: {fileID: 2901432277405310977}
+  ultiMng: {fileID: 6447467696175331046}
 --- !u!1 &6051709835673717618
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 6051709835673717618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.384, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,9 +300,9 @@ GameObject:
   - component: {fileID: 2694289825095310188}
   - component: {fileID: 4928003594338019540}
   - component: {fileID: -7331718447807182323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,7 +430,7 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 3243289112247396084}
   flashRate: 0.1
-  normalColor: {r: 1, g: 1, b: 1, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 1, g: 0.5613208, b: 0.5613208, a: 0.64705884}
   OnCompleted:
     m_PersistentCalls:

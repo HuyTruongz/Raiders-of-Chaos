@@ -28,8 +28,10 @@ namespace hyhy.SPM
                 pooledObjects = _pooledObjects;
             }
         }
-        private void Start()
+
+        public override void Awake()
         {
+            base.Awake();
             Init();
         }
 

@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1557713995
+  m_SortingLayer: -1
+  m_SortingOrder: 15
   m_Sprite: {fileID: -1204559386, guid: c2ed0ff38f3d74943974b366ba739887, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 2708044296850822317}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f56ab67d508b99c40a0789547c3fce5e, type: 2}
+  m_Controller: {fileID: 9100000, guid: c95f34d882d02f146af9cfafdbda0144, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -115,6 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215497068602076939}
+  - component: {fileID: 3063159420613957448}
   m_Layer: 0
   m_Name: ExplosionVfx
   m_TagString: Untagged
@@ -138,3 +139,18 @@ Transform:
   - {fileID: 4866392798879538042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3063159420613957448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902496958987131668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07640ef684723e64f97b2dd2e9d8beb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableOnly: 1
+  delay: 1
+  isOverride: 0

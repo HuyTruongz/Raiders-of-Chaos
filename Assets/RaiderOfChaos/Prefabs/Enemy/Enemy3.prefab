@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1527990598925932054}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.184, y: -0.106, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4093772506978059959}
   - component: {fileID: 9164500031376770632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,9 +100,9 @@ GameObject:
   - component: {fileID: 6231920760165488642}
   - component: {fileID: 7356468245046176506}
   - component: {fileID: -6864226616735081990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,8 +183,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019808829, y: 0.011885345}
-  m_Size: {x: 0.55546486, y: 1.1109296}
+  m_Offset: {x: -0.019808829, y: -0.024178624}
+  m_Size: {x: 0.55546486, y: 1.1743248}
   m_Direction: 0
 --- !u!114 &7356468245046176506
 MonoBehaviour:
@@ -212,7 +212,7 @@ MonoBehaviour:
   isEnemyFlight: 0
   isBoss: 0
   bossStat: {fileID: 11400000, guid: 5708e0a669297364ba1d899ff1b9dc3c, type: 2}
-  actionDist: 1.5
+  actionDist: 1
   ultiDist: 4.5
   dashDist: 4
 --- !u!114 &-6864226616735081990
@@ -230,7 +230,7 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 4780446659377620714}
   flashRate: 0.1
-  normalColor: {r: 1, g: 1, b: 1, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 1, g: 0.5613208, b: 0.5613208, a: 0.64705884}
   OnCompleted:
     m_PersistentCalls:
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 6769848896688966262}
   - component: {fileID: 313216009725698268}
   - component: {fileID: 2605528447053948985}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ultimate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16451a1088bb26c44b20e17673dc4249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultiCtrl: []
+  ultiCtrl:
+  - {fileID: 2605528447053948985}
 --- !u!114 &2605528447053948985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,10 +294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9da6019e5101842952d44f10d0d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
-  projectilePool: None
-  speed: 0
-  firePoint: {fileID: 0}
+  rate: 1
+  projectilePool: 1730979168:659123:403890
+  speed: 7
+  firePoint: {fileID: 1531153574580717700}
 --- !u!1 &6620910469022408061
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +311,7 @@ GameObject:
   - component: {fileID: 8320439031672337393}
   - component: {fileID: 1808451275209104432}
   - component: {fileID: 4388420007008097282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,5 +433,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 7356468245046176506}
-  weapon: {fileID: 0}
-  ultiMng: {fileID: 0}
+  weapon: {fileID: 3623855775439441243}
+  ultiMng: {fileID: 313216009725698268}

@@ -430,7 +430,7 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 5514424052607691491}
   flashRate: 0
-  normalColor: {r: 1, g: 1, b: 1, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   flashColor: {r: 1, g: 0.5801887, b: 0.5801887, a: 0.64705884}
   OnCompleted:
     m_PersistentCalls:

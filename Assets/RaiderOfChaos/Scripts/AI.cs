@@ -139,7 +139,7 @@ namespace hyhy.RaidersOfChaos
             m_fsm.ChangeState(AIState.Walk);
             m_prevState = m_fsm.State;
             gameObject.layer = normalLayer;
-            //CreateHealthBarUI();
+            CreateHealthBarUI();
         }
 
         private void GetActionRate()
@@ -285,6 +285,7 @@ namespace hyhy.RaidersOfChaos
         }
         private void Dead_Enter()
         {
+            m_rb.isKinematic = false;
             m_player.AddEnergy(m_curStat.EnergyBonus);
             m_player.AddXp(m_curStat.XpBonus);
         }

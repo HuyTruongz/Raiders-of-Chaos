@@ -67,9 +67,16 @@ namespace hyhy.RaidersOfChaos
                 actor.WhoHit = owner;
                 actor.TakeDamaged(damage,owner);
 
+                //var rotate = transform.localScale.x < 0 ?
+                //    Quaternion.Inverse(transform.rotation) : 
+                //    transform.rotation;
+
+                PoolersManager.Ins.Spawn(PoolerTarget.NONE, bodyHitPool, m_hit.transform.position
+                   , Quaternion.identity);
+
                 if (deactiveWhenHitted)
                 {
-                    gameObject.SetActive(true);
+                    gameObject.SetActive(false);
                 }
             }
         }
