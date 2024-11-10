@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enemy1
   m_EditorClassIdentifier: 
   id: 172951235855894495328
-  thumb: {fileID: 5421009758976215951, guid: bb34f164a002c3c4cbc3b8399d1829d8, type: 3}
+  thumb: {fileID: 1503777024, guid: 6063ed4fd4d2fc940aa83b08cfc39790, type: 3}
   hp: 5
   damage: 2
   moveSpeed: 3
@@ -22,7 +22,7 @@ MonoBehaviour:
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkRate: 1
-  dashRate: 1
+  dashRate: 0.3
   ultiRate: 0.05
   atkTime: 2
   ultiTime: 5
