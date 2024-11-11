@@ -93,7 +93,7 @@ namespace hyhy.RaidersOfChaos
             if (GamepadManager.Ins.IsStatic)
             {
                 m_curSpeed = 0f;
-                m_rb.velocity = new Vector2(m_curSpeed,m_rb.velocity.y);
+                m_rb.velocity = new Vector2(m_curSpeed, m_rb.velocity.y);
                 if (!m_isInvincible)
                 {
                     ChangeState(PlayerState.Idle);
@@ -108,13 +108,14 @@ namespace hyhy.RaidersOfChaos
                         m_isAttacked = true;
                         ChangeState(PlayerState.Attack);
                     }
-                }else if (GamepadManager.Ins.CanUlti && m_curEnergy >= m_curStat.ultiEnergy)
+                }
+                else if (GamepadManager.Ins.CanUlti && m_curEnergy >= m_curStat.ultiEnergy)
                 {
                     ChangeState(PlayerState.Ultimate);
                 }
             }
 
-            ReduceActionRate(ref m_isDashed,ref m_curDashRate,m_curStat.dashRate);
+            ReduceActionRate(ref m_isDashed, ref m_curDashRate, m_curStat.dashRate);
             ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, m_curStat.atkRate);
         }
 
@@ -129,7 +130,7 @@ namespace hyhy.RaidersOfChaos
 
                 if (GameManager.Ins.setting.isOnMobile)
                 {
-                    m_rb.velocity = new Vector2(GamepadManager.Ins.joystick.xValue * m_curSpeed,m_rb.velocity.y);
+                    m_rb.velocity = new Vector2(GamepadManager.Ins.joystick.xValue * m_curSpeed, m_rb.velocity.y);
                 }
                 else
                 {
@@ -143,7 +144,7 @@ namespace hyhy.RaidersOfChaos
             if (IsFacingLeft)
             {
                 transform.position = new Vector3(transform.position.x - m_curStat.dashDist,
-                    transform.position.y,transform.position.z);
+                    transform.position.y, transform.position.z);
             }
             else
             {
@@ -206,9 +207,9 @@ namespace hyhy.RaidersOfChaos
         {
             base.TakeDamaged(dmg - m_curStat.defense, whoHit);
             if (IsDead || IsUlti) return;
-            if(m_curHp > 0 && !m_isInvincible)
+            if (m_curHp > 0 && !m_isInvincible)
             {
-                ChangeState(PlayerState.Hit); 
+                ChangeState(PlayerState.Hit);
             }
         }
 
@@ -228,6 +229,16 @@ namespace hyhy.RaidersOfChaos
             m_curEnergy += energyBouns;
         }
 
+        private void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.Collectable.ToString()))
+            {
+                Collectable collectable = col.gameObject.GetComponent<Collectable>();
+                if (!collectable) return;
+                collectable.Trigger();                
+            }
+        }
+
         #region
         private void Idle_Enter()
         {
@@ -235,7 +246,7 @@ namespace hyhy.RaidersOfChaos
         }
         private void Idle_Update()
         {
-            if(GamepadManager.Ins.CanMoveLeft || GamepadManager.Ins.CanMoveRight)
+            if (GamepadManager.Ins.CanMoveLeft || GamepadManager.Ins.CanMoveRight)
             {
                 ChangeState(PlayerState.Walk);
             }
@@ -266,7 +277,7 @@ namespace hyhy.RaidersOfChaos
             {
                 m_curSpeed += Time.deltaTime * 1.5f;
                 m_curSpeed = Mathf.Clamp(m_curSpeed, m_curStat.moveSpeed, m_curStat.runSpeed);
-                if(m_curSpeed >= m_curStat.runSpeed)
+                if (m_curSpeed >= m_curStat.runSpeed)
                 {
                     Helper.PlayAnim(m_amin, PlayerState.Run.ToString());
                 }
@@ -279,12 +290,13 @@ namespace hyhy.RaidersOfChaos
             if (GamepadManager.Ins.CanMoveLeft)
             {
                 Move(Direction.Left);
-            }else if (GamepadManager.Ins.CanMoveRight)
+            }
+            else if (GamepadManager.Ins.CanMoveRight)
             {
                 Move(Direction.Right);
             }
 
-            
+
         }
         private void Walk_Exit() { }
         private void Run_Enter() { }
@@ -334,7 +346,7 @@ namespace hyhy.RaidersOfChaos
         }
         private void Hit_Exit()
         {
-            
+
         }
         private void Fall_Enter() { }
         private void Fall_Update()
@@ -352,7 +364,7 @@ namespace hyhy.RaidersOfChaos
             Helper.PlayAnim(m_amin, PlayerState.Dead.ToString());
         }
         private void Dead_Exit() { }
-        private void Ultimate_Enter() 
+        private void Ultimate_Enter()
         {
             m_curEnergy -= m_curStat.ultiEnergy;
             m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
@@ -371,11 +383,11 @@ namespace hyhy.RaidersOfChaos
             gameObject.layer = invincibleLayer;
             ChangeStateDelay(PlayerState.Idle);
         }
-        private void Dash_Update() 
+        private void Dash_Update()
         {
             Helper.PlayAnim(m_amin, PlayerState.Dash.ToString());
         }
-        private void Dash_Exit() 
+        private void Dash_Exit()
         {
             gameObject.layer = normalLayer;
         }
