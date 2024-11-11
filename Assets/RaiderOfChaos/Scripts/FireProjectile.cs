@@ -10,54 +10,59 @@ namespace hyhy.RaidersOfChaos
         [PoolerKeys(target = PoolerTarget.NONE)]
         public string projectilePool;
         public float speed;
-        public Transform firePoint;
+        public Transform[] firePoints;
 
         public override void DealDamage()
         {
-            GameObject p = PoolersManager.Ins.Spawn(PoolerTarget.NONE, projectilePool, firePoint.position, Quaternion.identity);
-            if (!p || !m_owner) return;
-
-            Projectile pComp = p.GetComponent<Projectile>();
-
-            if (!pComp) return;
-
-            pComp.damageTo = m_owner.damageTo;
-            if(speed > 0)
+            for (int i = 0; i < firePoints.Length; i++)
             {
-                pComp.speed = speed;
-            }
+                var point = firePoints[i];
+                if (point == null) continue;
+                GameObject p = PoolersManager.Ins.Spawn(PoolerTarget.NONE, projectilePool, point.position, Quaternion.identity);
+                if (!p || !m_owner) return;
 
-            pComp.damage = m_owner.CurDmg;
-            pComp.owner = m_owner;
+                Projectile pComp = p.GetComponent<Projectile>();
 
-            if (m_owner.IsFacingLeft)
-            {
-                if(p.transform.localScale.x > 0)
+                if (!pComp) return;
+
+                pComp.damageTo = m_owner.damageTo;
+                if (speed > 0)
                 {
-                    p.transform.localScale = new Vector3(
-                        p.transform.localScale.x * -1,
-                        p.transform.localScale.y,
-                        p.transform.localScale.z);
+                    pComp.speed = speed;
                 }
 
-                if(pComp && pComp.speed > 0)
-                {
-                    pComp.speed *= -1;
-                }
-            }
-            else
-            {
-                if (p.transform.localScale.x < 0)
-                {
-                    p.transform.localScale = new Vector3(
-                        p.transform.localScale.x * -1,
-                        p.transform.localScale.y,
-                        p.transform.localScale.z);
-                }
+                pComp.damage = m_owner.CurDmg;
+                pComp.owner = m_owner;
 
-                if (pComp && pComp.speed < 0)
+                if (point.position.x < m_owner.transform.position.x)
                 {
-                    pComp.speed *= -1;
+                    if (p.transform.localScale.x > 0)
+                    {
+                        p.transform.localScale = new Vector3(
+                            p.transform.localScale.x * -1,
+                            p.transform.localScale.y,
+                            p.transform.localScale.z);
+                    }
+
+                    if (pComp && pComp.speed > 0)
+                    {
+                        pComp.speed *= -1;
+                    }
+                }
+                else
+                {
+                    if (p.transform.localScale.x < 0)
+                    {
+                        p.transform.localScale = new Vector3(
+                            p.transform.localScale.x * -1,
+                            p.transform.localScale.y,
+                            p.transform.localScale.z);
+                    }
+
+                    if (pComp && pComp.speed < 0)
+                    {
+                        pComp.speed *= -1;
+                    }
                 }
             }
         }

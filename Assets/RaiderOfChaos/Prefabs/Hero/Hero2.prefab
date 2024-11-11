@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2262496101123894988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4824411593780175222}
+  m_Layer: 6
+  m_Name: CreatePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4824411593780175222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262496101123894988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.436, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 366995283151501222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3088139230734933697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +42,7 @@ GameObject:
   - component: {fileID: 495017422049430065}
   - component: {fileID: 3755709701692842409}
   - component: {fileID: 904248421447733747}
+  - component: {fileID: 6276795830573752013}
   m_Layer: 6
   m_Name: UltiManager
   m_TagString: Untagged
@@ -47,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ultiCtrl:
   - {fileID: 904248421447733747}
+  - {fileID: 6276795830573752013}
 --- !u!114 &904248421447733747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +95,26 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979251:465292:561518
   speed: 10
-  firePoint: {fileID: 8767717948945022338}
+  firePoints:
+  - {fileID: 8767717948945022338}
+--- !u!114 &6276795830573752013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088139230734933697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9da6019e5101842952d44f10d0d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 0.4
+  projectilePool: 1730979476:760828:24423
+  speed: 10
+  firePoints:
+  - {fileID: 4824411593780175222}
+  - {fileID: 8915573397281202763}
 --- !u!1 &5457108163615822297
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +318,7 @@ MonoBehaviour:
   hpBarOffset: {x: 0, y: 0, z: 0}
   hpBarScale: {x: 1, y: 1, z: 1}
   flashVfx: {fileID: 7908417792847245435}
-  deadVfx: None
+  deadVfx: 1730979524:470811:262343
   isEnemyFlight: 0
   headCol: {fileID: 930347334239896734}
   bodyCol: {fileID: 3225043930691558982}
@@ -347,6 +399,37 @@ MonoBehaviour:
   shakeDur: 0
   shakeFreq: 0
   shakeAmpli: 0
+--- !u!1 &7327841413230812650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8915573397281202763}
+  m_Layer: 6
+  m_Name: CreatePoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8915573397281202763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7327841413230812650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.436, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 366995283151501222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8750414513972106851
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +495,8 @@ Transform:
   m_Children:
   - {fileID: 8840630380441741529}
   - {fileID: 8767717948945022338}
+  - {fileID: 4824411593780175222}
+  - {fileID: 8915573397281202763}
   m_Father: {fileID: 3361167237061442021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3605092057921573320
