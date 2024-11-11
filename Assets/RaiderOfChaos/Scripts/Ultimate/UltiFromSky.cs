@@ -45,5 +45,11 @@ namespace hyhy.RaidersOfChaos
             curentTargetNum = m_targets.Count > targetNum ? targetNum : m_targets.Count;
             return curentTargetNum;
         }
+
+        protected virtual void OnDrawGizmos()
+        {
+            Gizmos.color = Helper.ChangAlpha(Color.green, 0.2f);
+            Gizmos.DrawSphere(transform.position, atkRadius);
+        }
     }
 }

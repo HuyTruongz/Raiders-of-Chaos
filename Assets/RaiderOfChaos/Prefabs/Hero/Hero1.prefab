@@ -306,7 +306,8 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979074:367236:660914
   speed: 7
-  firePoint: {fileID: 4181175263975518868}
+  firePoints:
+  - {fileID: 4181175263975518868}
 --- !u!1 &5151762969553458483
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +443,7 @@ GameObject:
   - component: {fileID: 5876076870316400279}
   - component: {fileID: 2983447688697510904}
   - component: {fileID: 3229797901411576643}
+  - component: {fileID: 4083504295468341594}
   m_Layer: 6
   m_Name: UltiManager
   m_TagString: Untagged
@@ -478,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ultiCtrl:
   - {fileID: 3229797901411576643}
+  - {fileID: 4083504295468341594}
 --- !u!114 &3229797901411576643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +493,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9da6019e5101842952d44f10d0d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
+  rate: 0
   projectilePool: 1730979184:886764:815157
   speed: 10
-  firePoint: {fileID: 4181175263975518868}
+  firePoints:
+  - {fileID: 4181175263975518868}
+--- !u!114 &4083504295468341594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9133999800035980680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bfec89acc6f0745b40c8645240cca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 1
+  weapon: 1730979442:808321:206744
+  targetNum: 5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  atkRadius: 10
+  weaponSpeed: 20
