@@ -47,7 +47,8 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979055:887131:718611
   speed: 7
-  firePoint: {fileID: 7307470281706492013}
+  firePoints:
+  - {fileID: 7307470281706492013}
 --- !u!1 &4820131230313113300
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +248,8 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979055:887131:718611
   speed: 7
-  firePoint: {fileID: 7307470281706492013}
+  firePoints:
+  - {fileID: 7307470281706492013}
 --- !u!1 &7889203737520035878
 GameObject:
   m_ObjectHideFlags: 0
