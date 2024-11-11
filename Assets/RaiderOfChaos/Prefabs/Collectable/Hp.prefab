@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7081499022034395202}
   - component: {fileID: 5565980703551497298}
-  m_Layer: 0
+  - component: {fileID: 911749848533999190}
+  - component: {fileID: 3597523410445815590}
+  - component: {fileID: 8720917651087962186}
+  m_Layer: 10
   m_Name: Hp
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -68,6 +71,71 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0017384291, y: -0.055297345}
   m_Size: {x: 0.27400583, y: 0.40264863}
   m_Direction: 0
+--- !u!50 &911749848533999190
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337746583914808010}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3597523410445815590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337746583914808010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ec7ff818f8dd64aae9c716e0b57889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBouns: 0
+  maxBouns: 0
+  lifeTime: 5
+  spawnForce: 8
+  hitSound: {fileID: 0}
+  deactiveWhenHitted: 1
+--- !u!114 &8720917651087962186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337746583914808010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6914ab552c473424bbea1e347bdafa9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 122946421443870449}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 0.3137255}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9203117414179107304
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,8 +146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8972662794548085351}
   - component: {fileID: 122946421443870449}
-  m_Layer: 0
-  m_Name: potion_A_red_full
+  m_Layer: 10
+  m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

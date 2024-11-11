@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9090445438080350344}
   - component: {fileID: 6256400574433409684}
   - component: {fileID: 8123643916036133054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,9 @@ GameObject:
   - component: {fileID: 6878258702609743330}
   - component: {fileID: 4058558748702305526}
   - component: {fileID: 4044906584606910992}
-  m_Layer: 0
+  - component: {fileID: -2999695061990101748}
+  - component: {fileID: 3047261664371465591}
+  m_Layer: 10
   m_Name: Coin
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -133,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 5508118203143711893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.97, y: -3.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202,3 +204,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2999695061990101748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508118203143711893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099f3ce35237e2840ac0140d5a44795b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBouns: 0
+  maxBouns: 0
+  lifeTime: 5
+  spawnForce: 8
+  hitSound: {fileID: 0}
+  deactiveWhenHitted: 0
+--- !u!114 &3047261664371465591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508118203143711893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6914ab552c473424bbea1e347bdafa9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 6256400574433409684}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 1, g: 1, b: 1, a: 0.3137255}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []

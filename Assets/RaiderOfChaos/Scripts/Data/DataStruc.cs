@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using hyhy.SPM;
 
 namespace hyhy.RaidersOfChaos
 {
@@ -67,6 +68,15 @@ namespace hyhy.RaidersOfChaos
     {
         Normal,
         Dead
+    }
+
+    [System.Serializable]
+    public class CollectableItem
+    {
+        [Range(0f, 1f)] public float spawnRate;
+        public int amount;
+        [PoolerKeys(target = PoolerTarget.NONE)]
+        public string collectablePool;
     }
 
 }

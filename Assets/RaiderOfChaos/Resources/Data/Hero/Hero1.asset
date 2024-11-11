@@ -32,7 +32,7 @@ MonoBehaviour:
   maxLevel: 50
   level: 1
   playerLevel: 1
-  xp: 5.4195294
+  xp: 8.243599
   lvUpxpRequired: 50
   point: 0
   xpUpRate: 20

@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03e95b1342aecc469a2f85903d79f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTo: 1
+  damageTo: 2
   stat: {fileID: 11400000, guid: a78dd431220c44a40aa12a1f569ab0eb, type: 2}
   normalLayer: 6
   invincibleLayer: 8

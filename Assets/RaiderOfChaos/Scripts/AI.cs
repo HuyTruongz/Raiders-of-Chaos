@@ -288,6 +288,12 @@ namespace hyhy.RaidersOfChaos
             m_rb.isKinematic = false;
             m_player.AddEnergy(m_curStat.EnergyBonus);
             m_player.AddXp(m_curStat.XpBonus);
+
+            float luckChecking = UnityEngine.Random.Range(0f, 1f);
+            if (luckChecking <= m_player.CurStat.luck)
+            {
+                CollectableManager.Ins.Spawn(transform.position);
+            }
         }
         private void Dead_Update()
         {
