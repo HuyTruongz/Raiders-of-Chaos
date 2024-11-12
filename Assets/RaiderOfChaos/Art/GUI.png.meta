@@ -265,7 +265,7 @@ TextureImporter:
         width: 47
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,6 +273,27 @@ TextureImporter:
       bones: []
       spriteID: ea0432de0ecba9d4eb33fdf8af842111
       internalID: 1407193082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 177
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca21f36f0bf55240a28a8eb8409a0a3
+      internalID: 188089231
       vertices: []
       indices: 
       edges: []
@@ -296,6 +317,7 @@ TextureImporter:
       GUI_5: -994300799
       GUI_6: -389611631
       GUI_7: 1407193082
+      GUI_8: 188089231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
