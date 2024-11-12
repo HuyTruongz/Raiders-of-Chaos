@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b81deb3efd5d8674682415f5757bbc69
+guid: e480343bc765b1f49a8fbf7c75690563
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixel-art-full-moon-icon-260nw-1027998514_preview_rev_1_0
+      name: 3.River_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 62
-        width: 193
-        height: 185
+        x: 0
+        y: 0
+        width: 320
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23af6c39ad6d25f4e831ca67880d255e
-      internalID: 1346494350
+      spriteID: 53f25c4f0d8e76f44a6fb3b9dcd7b795
+      internalID: -45545992
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pixel-art-full-moon-icon-260nw-1027998514_preview_rev_1_0: 1346494350
+      3.River_0: -45545992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
