@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace hyhy.RaidersOfChaos
 {
-    public class SceneController : MonoBehaviour
+    public class SceneController : Singleton<SceneController>
     {
         public void LoandGamePlay()
         {

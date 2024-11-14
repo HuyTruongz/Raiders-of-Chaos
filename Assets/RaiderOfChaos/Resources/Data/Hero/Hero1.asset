@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d358d67309b9fb64db6251b1743d3707, type: 3}
   m_Name: Hero1
   m_EditorClassIdentifier: 
-  id: 172950839893835336062
+  id: 173157623596310762809
   thumb: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
   hp: 40
   damage: 3
@@ -32,7 +32,7 @@ MonoBehaviour:
   maxLevel: 50
   level: 1
   playerLevel: 1
-  xp: 8.243599
+  xp: 0
   lvUpxpRequired: 50
   point: 0
   xpUpRate: 20

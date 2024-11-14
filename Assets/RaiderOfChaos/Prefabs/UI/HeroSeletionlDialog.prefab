@@ -559,7 +559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2711504787645970711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7604548966295623597}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.ShopDialog, Assembly-CSharp
+        m_MethodName: PrevHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703956506268674265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1135,7 @@ GameObject:
   - component: {fileID: 7016441507012636443}
   - component: {fileID: 5778975888768051985}
   m_Layer: 5
-  m_Name: PrevBtn (1)
+  m_Name: NextBtn (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,7 +1241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7016441507012636443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7604548966295623597}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.ShopDialog, Assembly-CSharp
+        m_MethodName: NextHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2029236499361741708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +1966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 54.9}
+  m_AnchoredPosition: {x: 0, y: 54.899994}
   m_SizeDelta: {x: 550, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3198941335311408863
@@ -2026,7 +2050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8986177134366707018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7604548966295623597}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.ShopDialog, Assembly-CSharp
+        m_MethodName: UpgradeHero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2976600635504833983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,13 +2275,14 @@ GameObject:
   - component: {fileID: 558704203606494938}
   - component: {fileID: 5288733641705319414}
   - component: {fileID: 7607864789998751233}
+  - component: {fileID: 7604548966295623597}
   m_Layer: 5
   m_Name: HeroSeletionlDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &558704203606494938
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2305,6 +2342,40 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7604548966295623597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3275892582535988255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bc40cabf109ef4d8831d5918d64d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  totalCointTxt: {fileID: 3142241197043774555}
+  heroPreview: {fileID: 5407588220464519205}
+  heroNameTxt: {fileID: 7965950345719515822}
+  heroAvatar: {fileID: 7569435213770115675}
+  levelFilled: {fileID: 5432641969394092151}
+  lvProgTxt: {fileID: 9008640838809316089}
+  lvCountingTxt: {fileID: 2129023897059397570}
+  pointTxt: {fileID: 7528213260124406175}
+  hpFilled: {fileID: 2953437356527074469}
+  atkFilled: {fileID: 1538832227699832060}
+  defFilled: {fileID: 1762096813665231187}
+  luckFilled: {fileID: 5473399321940539722}
+  unlockBtn: {fileID: 6316978851069176104}
+  upgaredeBtn: {fileID: 2676318856026552716}
+  unlockBtnTxt: {fileID: 2048706156570926365}
+  upgradeBtnTxt: {fileID: 7042845808366738773}
+  nextBtnImg: {fileID: 7016441507012636443}
+  prevBtnImg: {fileID: 2711504787645970711}
+  navBtnNormal: {fileID: 824822221, guid: 10805073aa9476f449323c1b6cba5520, type: 3}
+  navBtnActive: {fileID: -673487500, guid: 5f438ba8dcc0b44428a5d70a96d5b20e, type: 3}
 --- !u!1 &3347184527863878316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +2778,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -32.2, y: 0}
+  m_AnchoredPosition: {x: -32.199997, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2454936806000079571
@@ -4479,7 +4550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4089580713887020539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7604548966295623597}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.ShopDialog, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8189155302950465847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,7 +5007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 54.9}
+  m_AnchoredPosition: {x: 0, y: 54.899994}
   m_SizeDelta: {x: 550, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5951453182147324231

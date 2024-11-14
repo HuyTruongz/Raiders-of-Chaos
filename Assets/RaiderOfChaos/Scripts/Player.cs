@@ -74,7 +74,7 @@ namespace hyhy.RaidersOfChaos
             m_preVState = PlayerState.Idle;
         }
 
-        private void LoandStat()
+        public void LoandStat()
         {
             if (!m_curStat) return;
 

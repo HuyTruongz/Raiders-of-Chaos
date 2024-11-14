@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 1429801559591908072}
   - component: {fileID: 7790859894616519479}
   - component: {fileID: 5722663130495095291}
+  - component: {fileID: 1207652229367089968}
   m_Layer: 5
   m_Name: LevleItem
   m_TagString: Untagged
@@ -368,6 +369,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1207652229367089968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324085305943133399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844780af518d2ec46a98018da1803b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTxt: {fileID: 9083476886399204442}
+  lockIcon: {fileID: 5183234560776745234}
+  starImgs:
+  - {fileID: 7916078339673851296}
+  - {fileID: 3038622827946569955}
+  - {fileID: 3815047047038730393}
+  btnComp: {fileID: 5722663130495095291}
+  activeStar: {fileID: 1533701260, guid: 10805073aa9476f449323c1b6cba5520, type: 3}
+  deactiveStar: {fileID: -1074088242, guid: f00611f1c9cc1e84fa84123b745ddf02, type: 3}
 --- !u!1 &2391998927751906325
 GameObject:
   m_ObjectHideFlags: 0
