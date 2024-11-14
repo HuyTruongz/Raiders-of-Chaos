@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/RaiderOfChaos/Scenes/Mainmenu.unity
+    guid: 05be8aa0b351ec84d919084d5fbdbf18
+  - enabled: 1
     path: Assets/RaiderOfChaos/Scenes/GamePlay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

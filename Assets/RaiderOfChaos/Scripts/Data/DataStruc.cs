@@ -79,4 +79,14 @@ namespace hyhy.RaidersOfChaos
         public string collectablePool;
     }
 
+    [System.Serializable]
+    public class ShopItem
+    {
+        public int Price;
+        public string heroName;
+        public Sprite preview;
+        public Sprite avatar;
+        public Player heroBb;
+    }
+
 }

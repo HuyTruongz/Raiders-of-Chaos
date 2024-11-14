@@ -1361,6 +1361,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325890434}
   m_CullTransparentMesh: 1
+--- !u!1 &1354474989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354474991}
+  - component: {fileID: 1354474990}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354474990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354474989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec34b9762bb6ce34088f3586863a8b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - Price: 0
+    heroName: Aldor
+    preview: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
+    avatar: {fileID: -1800548292, guid: 38e067704ff08904ab1fbe0313697a56, type: 3}
+    heroBb: {fileID: 494490825392902776, guid: 9de80c587a2d4194ba82f1b45b8d0204, type: 3}
+  - Price: 2000
+    heroName: Lira
+    preview: {fileID: 1133090054, guid: c8a39661c9dcdf342923d5a7633ed7fc, type: 3}
+    avatar: {fileID: -1811784887, guid: 3edb5dc1e5a71e84999f637050869c9b, type: 3}
+    heroBb: {fileID: 6788997984193133997, guid: b17fbc670fa5b4e4abcd5767ead417dc, type: 3}
+--- !u!4 &1354474991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354474989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684081902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,3 +2443,4 @@ SceneRoots:
   - {fileID: 1935556620}
   - {fileID: 1117405218}
   - {fileID: 465536200}
+  - {fileID: 1354474991}
