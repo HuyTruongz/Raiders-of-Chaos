@@ -117,23 +117,24 @@ namespace hyhy.RaidersOfChaos
             UpdateValue<string>(ref playerStats, id, stat);
         }
 
-        public float GetCompletedTimes(int id)
+        public float GetLevelScore(int levelId)
         {
-            return GetValue<float>(completedTimes, id);
+            return GetValue<float>(completedTimes, levelId);
         }
 
-        public void UpdateCompletedTimesNoneCheck(int id,float time)
+        public void UpdateLevelScoreNoneCheck(int levelId, float time)
         {
-            UpdateValue<float>(ref completedTimes, id, time);
+            UpdateValue<float>(ref completedTimes, levelId, time);
         }
 
-        public void UpdateCompletedTimes(int id, float time)
-        {
-            float oldTime = GetValue<float>(completedTimes, id);
 
-            if(time < oldTime || oldTime == 0)
+        public void UpdateLevelScore(int levelId, float time)
+        {
+            float oldTime = GetValue<float>(completedTimes, levelId);
+
+            if (time < oldTime || oldTime == 0)
             {
-                UpdateCompletedTimesNoneCheck(id, time);
+                UpdateLevelScoreNoneCheck(levelId, time);
             }
         }
 

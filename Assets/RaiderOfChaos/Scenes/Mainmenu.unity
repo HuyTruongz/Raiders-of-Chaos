@@ -1912,6 +1912,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994072689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994072691}
+  - component: {fileID: 1994072690}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994072690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994072689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c377dc33cd3004591b90a5065804f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - minBonus: 50
+    maxBonus: 150
+    minXpBonus: 20
+    maxXpBonus: 50
+    goal:
+      timeOneSatr: 300
+      timeTwoSatr: 180
+      timeThreeSatr: 120
+    waveCtrFb: {fileID: 8366197965799240917, guid: 1119c30a9e7dfae40afa153f258e7bb1, type: 3}
+    mapFb: {fileID: 3494947032894057972, guid: 1487c2cf47262d24db62434a9d6f819c, type: 3}
+  - minBonus: 80
+    maxBonus: 180
+    minXpBonus: 35
+    maxXpBonus: 65
+    goal:
+      timeOneSatr: 360
+      timeTwoSatr: 240
+      timeThreeSatr: 180
+    waveCtrFb: {fileID: 8366197965799240917, guid: ae011e01bae9cee42aeb58a8a42cf498, type: 3}
+    mapFb: {fileID: 2016982290815191719, guid: d681b512f4f77374a84496e4357835fc, type: 3}
+  - minBonus: 100
+    maxBonus: 225
+    minXpBonus: 50
+    maxXpBonus: 80
+    goal:
+      timeOneSatr: 500
+      timeTwoSatr: 400
+      timeThreeSatr: 240
+    waveCtrFb: {fileID: 8366197965799240917, guid: f51f86c730f79e441b6636a55bae6aa9, type: 3}
+    mapFb: {fileID: 1475374271467090479, guid: 39579256216416c45a443706f74f2cb8, type: 3}
+  - minBonus: 300
+    maxBonus: 800
+    minXpBonus: 80
+    maxXpBonus: 150
+    goal:
+      timeOneSatr: 1000
+      timeTwoSatr: 700
+      timeThreeSatr: 500
+    waveCtrFb: {fileID: 8366197965799240917, guid: 8e1ef47eb6020564f921098f243a42c6, type: 3}
+    mapFb: {fileID: 6667915282294131971, guid: 56a7595e08b25d543872d01a03f165c0, type: 3}
+  - minBonus: 800
+    maxBonus: 2000
+    minXpBonus: 300
+    maxXpBonus: 800
+    goal:
+      timeOneSatr: 3000
+      timeTwoSatr: 2000
+      timeThreeSatr: 1000
+    waveCtrFb: {fileID: 8366197965799240917, guid: 35ab16fcfa827af458bb463192dc774a, type: 3}
+    mapFb: {fileID: 6494180101236918132, guid: 014b2c527c9fbb540a926853e64c87d5, type: 3}
+--- !u!4 &1994072691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994072689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &227710179747806248 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 558704203606494938, guid: a772881bbde0f11448c8a92f425ec6d4, type: 3}
@@ -2603,3 +2698,4 @@ SceneRoots:
   - {fileID: 243773220}
   - {fileID: 1001431102}
   - {fileID: 783300928}
+  - {fileID: 1994072691}

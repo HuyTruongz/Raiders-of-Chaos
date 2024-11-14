@@ -89,4 +89,40 @@ namespace hyhy.RaidersOfChaos
         public Player heroBb;
     }
 
+    [System.Serializable]
+    public class LevelItem
+    {
+        public int minBonus;
+        public int maxBonus;
+        public int minXpBonus;
+        public int maxXpBonus;
+        public Goal goal;
+        public WavePlayer waveCtrFb;
+        public FreeParallax mapFb;
+    }
+
+    [System.Serializable]
+    public class Goal
+    {
+        public int timeOneSatr;
+        public int timeTwoSatr;
+        public int timeThreeSatr;
+
+        public int GetStar(int time)
+        {
+            if (time < timeThreeSatr)
+            {
+                return 3;
+            }
+            else if (time < timeTwoSatr)
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+    }
+
 }
