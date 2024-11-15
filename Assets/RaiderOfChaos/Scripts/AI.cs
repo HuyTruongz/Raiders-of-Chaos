@@ -69,6 +69,8 @@ namespace hyhy.RaidersOfChaos
 
         private void Update()
         {
+            LimitHozMoving();
+
             if (!m_player)
             {
                m_player = GameManager.Ins.Player;

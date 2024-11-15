@@ -8,7 +8,6 @@ namespace hyhy.RaidersOfChaos
     public class GameManager : Singleton<GameManager>
     {
         public GamePlaySetting setting;
-        [SerializeField]
         private Player m_player;
         private FreeParallax m_map;
         private WavePlayer m_waveCtr;
@@ -52,7 +51,7 @@ namespace hyhy.RaidersOfChaos
             m_missionXpBouns = Random.Range(m_curLevel.minXpBonus,m_curLevel.maxXpBonus);
             if (m_curLevel.mapFb)
             {
-                Instantiate(m_curLevel.mapFb, Vector3.zero, Quaternion.identity);
+               m_map = Instantiate(m_curLevel.mapFb, Vector3.zero, Quaternion.identity);
             }
 
             ChangPlayer();
@@ -76,7 +75,6 @@ namespace hyhy.RaidersOfChaos
 
         public void ChangPlayer()
         {
-            if(!m_player) return;
             Vector3 spawnPos = m_player ? m_player.transform.position : Vector3.zero;
             if (m_player)
             {
@@ -121,6 +119,7 @@ namespace hyhy.RaidersOfChaos
         public void SetMapSpeed(float speed)
         {
             if(!m_map) return;
+            m_map.Speed = speed;
         }
 
         private IEnumerator CamFollowDelay()

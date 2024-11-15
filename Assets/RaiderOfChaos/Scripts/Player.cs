@@ -63,6 +63,12 @@ namespace hyhy.RaidersOfChaos
 
         private void Update()
         {
+            LimitHozMoving();
+            if(m_isInvincible || m_isKnockBack)
+            {
+                float mapSpeed = m_isFacingLeft ? m_curStat.knockbackForce : - m_curStat.knockbackForce;
+                GameManager.Ins.SetMapSpeed(mapSpeed);
+            }
             ActionHandle();
         }
 
@@ -96,6 +102,7 @@ namespace hyhy.RaidersOfChaos
                 m_rb.velocity = new Vector2(m_curSpeed, m_rb.velocity.y);
                 if (!m_isInvincible)
                 {
+                    GameManager.Ins.SetMapSpeed(0);
                     ChangeState(PlayerState.Idle);
                 }
             }
@@ -135,6 +142,15 @@ namespace hyhy.RaidersOfChaos
                 else
                 {
                     m_rb.velocity = new Vector2(m_hozDir * m_curSpeed, m_rb.velocity.y);
+                }
+
+                if (CameraFollow.ins.IsHozStuck)
+                {
+                    GameManager.Ins.SetMapSpeed(0);
+                }
+                else
+                {
+                    GameManager.Ins.SetMapSpeed(-m_hozDir * CurSpeed);
                 }
             }
         }
@@ -357,10 +373,12 @@ namespace hyhy.RaidersOfChaos
         private void Dead_Enter()
         {
             ActiveCol(PlayerCollider.Dead);
+            CamShake.ins.ShakeTrigger(0.2f,0.2f);
         }
         private void Dead_Update()
         {
             gameObject.layer = deadLayer;
+            GameManager.Ins.SetMapSpeed(0);
             Helper.PlayAnim(m_amin, PlayerState.Dead.ToString());
         }
         private void Dead_Exit() { }

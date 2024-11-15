@@ -288,6 +288,15 @@ namespace hyhy.RaidersOfChaos
             }
         }
 
+        protected void LimitHozMoving()
+        {
+            float minX = CameraFollow.ins.LeftLimit - 6f;
+            float maxX = CameraFollow.ins.RightLimit + 6f;
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x,minX,maxX),
+                transform.position.y,
+                transform.position.z);
+        }
+
         protected virtual void OnDrawGizmos()
         {
             if (!string.IsNullOrEmpty(healthBarPool))

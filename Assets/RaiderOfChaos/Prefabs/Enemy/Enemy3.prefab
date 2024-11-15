@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac02ea6c61164714f9ccc523ab0bb44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTo: 0
+  damageTo: 1
   stat: {fileID: 11400000, guid: b062a41f197ab9d4bb5ece1d8a0a9208, type: 2}
   normalLayer: 7
   invincibleLayer: 8
@@ -297,7 +297,7 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979168:659123:403890
   speed: 7
-  firePoint: {fileID: 1531153574580717700}
+  firePoints: []
 --- !u!1 &6620910469022408061
 GameObject:
   m_ObjectHideFlags: 0

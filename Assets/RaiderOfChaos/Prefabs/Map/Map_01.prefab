@@ -208,7 +208,7 @@ MonoBehaviour:
     SpeedRatio: 0.4
     RepositionLogic:
       PositionMode: 1
-      ScaleHeight: 1.2
+      ScaleHeight: 1.3
       SortingOrder: 0
       MinYPercent: 0
       MaxYPercent: 0
