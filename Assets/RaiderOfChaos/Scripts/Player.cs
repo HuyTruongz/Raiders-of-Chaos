@@ -90,6 +90,7 @@ namespace hyhy.RaidersOfChaos
             m_curDashRate = m_curStat.dashRate;
             m_curAttackRate = m_curStat.atkRate;
             m_curEnergy = m_curStat.ultiEnergy;
+         
         }
 
         private void ActionHandle()
@@ -124,6 +125,10 @@ namespace hyhy.RaidersOfChaos
 
             ReduceActionRate(ref m_isDashed, ref m_curDashRate, m_curStat.dashRate);
             ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, m_curStat.atkRate);
+
+            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curAttackRate, m_curStat.atkRate);
+            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curDashRate, m_curStat.dashRate);
+            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
         }
 
         private void Move(Direction dir)
@@ -227,6 +232,8 @@ namespace hyhy.RaidersOfChaos
             {
                 ChangeState(PlayerState.Hit);
             }
+
+            GUIManager.Ins.hpBar.UpdateValue(m_curHp, m_curStat.hp);
         }
 
         public void AddXp(float xp)
@@ -237,12 +244,19 @@ namespace hyhy.RaidersOfChaos
                 () =>
                 {
                     m_curHp = m_curStat.hp;
+
+                    GUIManager.Ins.dmgTxtMng.Add("Level Up",transform,"level_up");
+                    GUIManager.Ins.UpdateHeroLevel(m_curStat.playerLevel);
+                    GUIManager.Ins.UpdateHeroPoint(m_curStat.point);
+                    GUIManager.Ins.hpBar.UpdateValue(m_curHp, m_curStat.hp);
                 }));
         }
 
         public void AddEnergy(float energyBouns)
         {
             m_curEnergy += energyBouns;
+            GUIManager.Ins.ultiBtnFilled.UpdateValue(m_curEnergy,m_curStat.ultiEnergy);
+            GUIManager.Ins.energyBar.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
         }
 
         private void OnCollisionEnter2D(Collision2D col)
@@ -387,6 +401,8 @@ namespace hyhy.RaidersOfChaos
             m_curEnergy -= m_curStat.ultiEnergy;
             m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
             ChangeStateDelay(PlayerState.Idle);
+
+            GUIManager.Ins.energyBar.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
         }
         private void Ultimate_Update()
         {

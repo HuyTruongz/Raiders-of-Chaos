@@ -73,9 +73,9 @@ namespace hyhy.RaidersOfChaos
             }
         }
 
-        public void UpdateCoinCounting(int point)
+        public void UpdateCoinCounting()
         {
-            UpdateTxt(ptCoungtingTxt,GameData.Ins.coin.ToString());
+            UpdateTxt(coinCountingTxt,GameData.Ins.coin.ToString());
         }
 
         public void UpdateWaveCounting(int cur,int total)

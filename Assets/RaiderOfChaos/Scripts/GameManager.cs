@@ -61,7 +61,9 @@ namespace hyhy.RaidersOfChaos
             m_waveCtr = Instantiate(m_curLevel.waveCtrFb, Vector3.zero, Quaternion.identity);
             m_waveCtr.waveBegins.AddListener(() =>
             {
-
+                GUIManager.Ins.UpdateWaveCounting(m_waveCtr.CurrentWaveIdx + 1, m_waveCtr.WaveSet.Count);
+                GUIManager.Ins.waveBar.UpdateValue(m_waveCtr.CurrentWave.enemyKilled, m_waveCtr.CurrentWave.totalEnemy);
+                GUIManager.Ins.waveCountingTxt.gameObject.SetActive(true);
             });
 
             m_waveCtr.finalWaveComplete.AddListener(() =>
@@ -71,6 +73,9 @@ namespace hyhy.RaidersOfChaos
             m_waveCtr.StartWave();
 
             Pref.SpriteOrder = 0;
+
+            GUIManager.Ins.UpdateCoinCounting();
+            GUIManager.Ins.ShowMobileGamePad(setting.isOnMobile);
         }
 
         public void ChangPlayer()
@@ -84,29 +89,37 @@ namespace hyhy.RaidersOfChaos
             if (shopItem == null) return;
             m_player = Instantiate(shopItem.heroBb, spawnPos, Quaternion.identity);
             m_player.Init();
+            GUIManager.Ins.UpdateHeroAvatar(shopItem.avatar);
+            GUIManager.Ins.hpBar.UpdateValue(m_player.CurHp, m_player.CurStat.hp);
+            GUIManager.Ins.energyBar.UpdateValue(m_player.CurEnergy, m_player.CurStat.ultiEnergy);
+            GUIManager.Ins.UpdateHeroPoint(m_player.CurStat.point);
+            GUIManager.Ins.UpdateHeroLevel(m_player.CurStat.playerLevel);
         }
 
         public void AddCoin(int coinToAdd)
         {
             GameData.Ins.coin += coinToAdd;
             GameData.Ins.SaveData();
+            GUIManager.Ins.UpdateCoinCounting();
         }
 
         public void AddHp(int hpToAdd)
         {
             if(!m_player) return;
             m_player.CurHp += hpToAdd;
+            GUIManager.Ins.hpBar.UpdateValue(m_player.CurHp,m_player.stat.hp);
         }
 
         public void Gameover()
         {
             m_fsm.ChangeState(GameState.Gameover);
-
+            GUIManager.Ins.youDeiTxt.gameObject.SetActive(true);
         }
 
         public void MissionCompleted()
         {
             m_fsm.ChangeState(GameState.Wining);
+            GUIManager.Ins.missionCompletedTxt.gameObject.SetActive(true);
         }
 
         public void Replay()

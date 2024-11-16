@@ -139,7 +139,15 @@ namespace hyhy.RaidersOfChaos
                 upgaredeBtn.gameObject.SetActive(isUnlocked);
             }
 
-            //cap nhat coin && poit o giao dien gameplay
+            if (GUIManager.Ins && GameManager.Ins)
+            {
+                GUIManager.Ins.UpdateCoinCounting();
+                GUIManager.Ins.UpdateHeroPoint(m_curStat.point);
+                GUIManager.Ins.hpBar.UpdateValue(GameManager.Ins.Player.CurHp,
+                    GameManager.Ins.Player.CurStat.hp);
+                GUIManager.Ins.energyBar.UpdateValue(GameManager.Ins.Player.CurEnergy,
+                    GameManager.Ins.Player.CurStat.ultiEnergy);
+            }
         }
 
         private void UnlockHero(ShopItem item)

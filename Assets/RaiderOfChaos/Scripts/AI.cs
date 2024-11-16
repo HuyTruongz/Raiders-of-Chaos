@@ -113,6 +113,11 @@ namespace hyhy.RaidersOfChaos
             {
                 Flip(Direction.Left);
             }
+
+            if (isBoss)
+            {
+                GUIManager.Ins.bossHpBar.UpdateValue(m_curHp,m_curStat.CurHp);
+            }
           
         }
 
@@ -148,6 +153,12 @@ namespace hyhy.RaidersOfChaos
             m_prevState = m_fsm.State;
             gameObject.layer = normalLayer;
             CreateHealthBarUI();
+
+            if (isBoss)
+            {
+                GUIManager.Ins.bossHpBar.Show(true);
+                GUIManager.Ins.bossHpBar.UpdateValue(m_curHp, m_curStat.CurHp);
+            }
         }
 
         private void GetActionRate()
@@ -297,6 +308,14 @@ namespace hyhy.RaidersOfChaos
             m_player.AddEnergy(m_curStat.EnergyBonus);
             m_player.AddXp(m_curStat.XpBonus);
 
+            WavePlayer waveCtrl = GameManager.Ins.WaveCtr;
+
+            if (waveCtrl)
+            {
+                waveCtrl.AddEnemyKilled(1);
+                GUIManager.Ins.waveBar.UpdateValue(waveCtrl.CurrentWave.enemyKilled,waveCtrl.CurrentWave.totalEnemy);
+            }
+
             float luckChecking = UnityEngine.Random.Range(0f, 1f);
             if (luckChecking <= m_player.CurStat.luck)
             {
@@ -309,7 +328,10 @@ namespace hyhy.RaidersOfChaos
             Helper.PlayAnim(m_amin, AIState.Dead.ToString());
         }
         private void Dead_Exit() { }
-        private void Hit_Enter() { }
+        private void Hit_Enter()
+        {
+            GUIManager.Ins.dmgTxtMng.Add($"- {m_dmgTaked.ToString("f2")}",transform,"ai_damage");
+        }
         private void Hit_Update()
         {
             m_rb.velocity = Vector3.zero;

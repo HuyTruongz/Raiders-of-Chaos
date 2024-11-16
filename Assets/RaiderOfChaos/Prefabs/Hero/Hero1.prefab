@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bfec89acc6f0745b40c8645240cca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
+  rate: 0.4
   weapon: 1730979442:808321:206744
   targetNum: 5
   targetLayer:
