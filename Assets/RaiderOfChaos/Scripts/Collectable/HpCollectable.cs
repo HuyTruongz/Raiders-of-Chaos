@@ -6,6 +6,9 @@ namespace hyhy.RaidersOfChaos
 {
     public class HpCollectable : Collectable
     {
-       
+        protected override void TriggerCore()
+        {
+            GameManager.Ins.AddHp(m_bonus);
+        }
     }
 }
