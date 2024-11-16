@@ -118,7 +118,7 @@ MonoBehaviour:
   - {fileID: 6697278545835089379}
   - {fileID: 6232145830686949364}
   randomSpawnPosition: {x: 0, y: 0, z: 0}
-  debugSpawnPosition: 1
+  debugSpawnPosition: 0
   finalWaveComplete:
     m_PersistentCalls:
       m_Calls: []

@@ -66,7 +66,7 @@ namespace hyhy.RaidersOfChaos
             LimitHozMoving();
             if(m_isInvincible || m_isKnockBack)
             {
-                float mapSpeed = m_isFacingLeft ? m_curStat.knockbackForce : - m_curStat.knockbackForce;
+                float mapSpeed = m_isFacingLeft ? -m_curStat.knockbackForce : m_curStat.knockbackForce;
                 GameManager.Ins.SetMapSpeed(mapSpeed);
             }
             ActionHandle();

@@ -253,7 +253,7 @@ public class WavePlayer : Singleton<WavePlayer>
         ypos = addRandom(startPoint.y, randomSpawnPosition.y);
         zpos = addRandom(startPoint.z, randomSpawnPosition.z);
         startPoint = new Vector3(xpos, ypos, zpos);
-        var aiClone = PoolersManager.Ins.Spawn(PoolerTarget.NONE, (element.randomEnemy) ? element.enemySet.GetEnemy() : element.enemy, startPoint, new Quaternion(0, 0, 0, 0));
+        var aiClone = PoolersManager.Ins.Spawn(PoolerTarget.NONE, (element.randomEnemy) ? element.enemySet.GetEnemy() : element.enemy, spawnPos, new Quaternion(0, 0, 0, 0));
         if (aiClone)
         {
             AI ai = aiClone.GetComponent<AI>();
