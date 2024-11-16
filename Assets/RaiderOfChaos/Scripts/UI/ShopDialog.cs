@@ -160,8 +160,11 @@ namespace hyhy.RaidersOfChaos
                 GameData.Ins.SaveData();
                 UpdateUI();
 
-                //cap nhat coin giao dien gameplay
-                // phat am thanh
+                if (GameManager.Ins)
+                {
+                    GameManager.Ins.ChangPlayer();
+                }
+
             }
         }
 
@@ -173,7 +176,10 @@ namespace hyhy.RaidersOfChaos
                 () =>
                 {
                     UpdateUI();
-                    GameManager.Ins.Player.LoandStat();
+                    if (GameManager.Ins && GameManager.Ins.Player)
+                    {
+                        GameManager.Ins.Player.LoandStat();
+                    }
                     //phat am thanh
                 });
         }
@@ -200,7 +206,11 @@ namespace hyhy.RaidersOfChaos
             {
                 GameData.Ins.curPlayerId = m_curPlayerId;
                 GameData.Ins.SaveData();
-                //goi phuong thuc thay doi play trong GameManager
+
+                if (GameManager.Ins)
+                {
+                    GameManager.Ins.ChangPlayer();
+                }
             }
         }
 
