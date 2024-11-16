@@ -34,6 +34,10 @@ namespace hyhy.RaidersOfChaos
         public Text youDeiTxt;
         public RectTransform coinMovingDest;
 
+        [Header("Dialog")]
+        public Dialog completedDialog;
+        public Dialog gameoverDialog;
+
         public override void Awake()
         {
             MakeSingleton(false);

@@ -246,7 +246,13 @@ namespace hyhy.RaidersOfChaos
         }
 
         #region FSM
-        private void Walk_Enter() { }
+        private void Walk_Enter()
+        {
+            if (isEnemyFlight)
+            {
+                m_rb.isKinematic = true;
+            }
+        }
         private void Walk_Update()
         {
             if (m_isAtked)
