@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using hyhy.SPM;
+using hyhy.RaidersOfChaos.Editor;
 
 namespace hyhy.RaidersOfChaos
 {
@@ -12,6 +13,10 @@ namespace hyhy.RaidersOfChaos
         public int maxBouns;
         public int lifeTime;
         public float spawnForce;
+        [LayerList]
+        public int collectedLayer;
+        [LayerList]
+        public int normalLayer;
         public AudioClip hitSound;
         public bool deactiveWhenHitted;
 
@@ -31,6 +36,8 @@ namespace hyhy.RaidersOfChaos
 
         public virtual void Init()
         {
+           gameObject.layer = normalLayer;
+
             m_isNotMoving = false;
             m_player = GameManager.Ins.Player;
             m_timeCounting = lifeTime;
@@ -50,22 +57,25 @@ namespace hyhy.RaidersOfChaos
             {
                 gameObject.SetActive(false);
             });
-
+            
             StartCoroutine(CountingDown());
         }
 
         public void Trigger()
         {
             TriggerCore();
+            if (deactiveWhenHitted)
+            {
+                gameObject.SetActive(false);
+            }
+
+           gameObject.layer = collectedLayer;
         }
 
         protected virtual void TriggerCore()
         {
             //playsound;
-            if (deactiveWhenHitted)
-            {
-                gameObject.SetActive(false);
-            }
+
         }
 
         private IEnumerator CountingDown()

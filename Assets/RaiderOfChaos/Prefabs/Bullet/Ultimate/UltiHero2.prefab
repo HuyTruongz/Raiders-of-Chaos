@@ -50,7 +50,7 @@ MonoBehaviour:
   speed: 7
   damage: 0
   deactiveWhenHitted: 0
-  bodyHitPool: 1730979505:792271:487384
+  bodyHitPool: None
   owner: {fileID: 0}
 --- !u!114 &6830470163884018763
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableOnly: 1
-  delay: 10
+  delay: 1
   isOverride: 0
 --- !u!1 &4576424782719068482
 GameObject:

@@ -547,7 +547,6 @@ GameObject:
   - component: {fileID: 32500317}
   - component: {fileID: 32500319}
   - component: {fileID: 32500318}
-  - component: {fileID: 32500320}
   m_Layer: 5
   m_Name: Filed
   m_TagString: Untagged
@@ -612,22 +611,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32500316}
   m_CullTransparentMesh: 1
---- !u!114 &32500320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32500316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0466532721297d34999df6dd43531cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filledImg: {fileID: 32500318}
-  OnComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &40006080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331018517}
   - component: {fileID: 331018519}
+  - component: {fileID: 331018520}
   m_Layer: 5
   m_Name: BossHealthBar
   m_TagString: Untagged
@@ -1638,6 +1622,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331018516}
   m_CullTransparentMesh: 1
+--- !u!114 &331018520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331018516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0466532721297d34999df6dd43531cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filledImg: {fileID: 32500318}
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &334258038
 GameObject:
   m_ObjectHideFlags: 0
@@ -5817,7 +5817,7 @@ MonoBehaviour:
   lvCountingTxt: {fileID: 793605474}
   ptCoungtingTxt: {fileID: 710702853}
   waveBar: {fileID: 1905230542}
-  bossHpBar: {fileID: 32500320}
+  bossHpBar: {fileID: 331018520}
   waveBarTxt: {fileID: 343443489}
   coinCountingTxt: {fileID: 543157088}
   waveCountingTxt: {fileID: 1899579441}

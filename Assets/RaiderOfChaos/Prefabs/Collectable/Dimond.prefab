@@ -114,6 +114,8 @@ MonoBehaviour:
   maxBouns: 20
   lifeTime: 5
   spawnForce: 8
+  collectedLayer: 12
+  normalLayer: 10
   hitSound: {fileID: 0}
   deactiveWhenHitted: 0
 --- !u!114 &-1384252625856494624

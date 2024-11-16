@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableOnly: 1
-  delay: 10
+  delay: 1
   isOverride: 0
