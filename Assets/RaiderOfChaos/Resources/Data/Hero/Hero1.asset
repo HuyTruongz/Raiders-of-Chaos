@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 173157623596310762809
   thumb: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
-  hp: 40
+  hp: 1
   damage: 3
   moveSpeed: 4
   jumpForce: 4
