@@ -66,7 +66,7 @@ namespace hyhy.RaidersOfChaos
 
         public void UpdateHeroPoint(int point)
         {
-            UpdateTxt(ptCoungtingTxt, $"Point{point}");
+            UpdateTxt(ptCoungtingTxt, $"{point} Point");
         }
 
         public void UpdateHeroAvatar(Sprite av)

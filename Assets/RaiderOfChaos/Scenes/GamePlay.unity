@@ -836,6 +836,7 @@ GameObject:
   - component: {fileID: 69901279}
   - component: {fileID: 69901281}
   - component: {fileID: 69901280}
+  - component: {fileID: 69901282}
   m_Layer: 5
   m_Name: JoyStrick
   m_TagString: Untagged
@@ -901,6 +902,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69901278}
   m_CullTransparentMesh: 1
+--- !u!114 &69901282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69901278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e399bf636c7d4449969240f1cacdcfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restriction: 120
+  snapsBack: 1
+  touchArea: {fileID: 808391877}
+  stick: {fileID: 1490766441}
+  xValue: 0
+  yValue: 0
+  progress: 0
+  isHolding: 0
 --- !u!1 &85741855
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa32e94e4b6f1b54e98c5ff8e9c50721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
+  joystick: {fileID: 69901282}
 --- !u!4 &107921113
 Transform:
   m_ObjectHideFlags: 0
@@ -1567,6 +1588,7 @@ GameObject:
   - component: {fileID: 285247271}
   - component: {fileID: 285247273}
   - component: {fileID: 285247272}
+  - component: {fileID: 285247274}
   m_Layer: 5
   m_Name: UltimateBtn
   m_TagString: Untagged
@@ -1632,6 +1654,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285247270}
   m_CullTransparentMesh: 1
+--- !u!114 &285247274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285247270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanUlti
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanUlti
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &331018516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2229,7 @@ GameObject:
   - component: {fileID: 425444958}
   - component: {fileID: 425444960}
   - component: {fileID: 425444959}
+  - component: {fileID: 425444961}
   m_Layer: 5
   m_Name: AtkBtn
   m_TagString: Untagged
@@ -2202,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2227,6 +2295,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425444957}
   m_CullTransparentMesh: 1
+--- !u!114 &425444961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425444957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanAttack
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanAttack
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &428928433
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,7 +4637,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.605
+  m_FillAmount: 0.787
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -10006,6 +10119,7 @@ GameObject:
   - component: {fileID: 2106678178}
   - component: {fileID: 2106678180}
   - component: {fileID: 2106678179}
+  - component: {fileID: 2106678181}
   m_Layer: 5
   m_Name: DashBtn
   m_TagString: Untagged
@@ -10071,6 +10185,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106678177}
   m_CullTransparentMesh: 1
+--- !u!114 &2106678181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106678177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanDash
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107921112}
+          m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.GamepadManager, Assembly-CSharp
+          m_MethodName: set_CanDash
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2121465005
 GameObject:
   m_ObjectHideFlags: 0

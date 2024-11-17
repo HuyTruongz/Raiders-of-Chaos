@@ -31,10 +31,10 @@ MonoBehaviour:
   luck: 0.4
   maxLevel: 50
   level: 1
-  playerLevel: 1
-  xp: 0
-  lvUpxpRequired: 15
-  point: 0
+  playerLevel: 2
+  xp: 2.0686226
+  lvUpxpRequired: 25
+  point: 1
   xpUpRate: 20
   atkSpeedRate: 1
   hpUpRate: 10

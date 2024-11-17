@@ -127,8 +127,8 @@ namespace hyhy.RaidersOfChaos
             ReduceActionRate(ref m_isAttacked, ref m_curAttackRate, m_curStat.atkRate);
 
             GUIManager.Ins.atkBtnFilled.UpdateValue(m_curAttackRate, m_curStat.atkRate);
-            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curDashRate, m_curStat.dashRate);
-            GUIManager.Ins.atkBtnFilled.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
+            GUIManager.Ins.dashBtnFilled.UpdateValue(m_curDashRate, m_curStat.dashRate);
+            GUIManager.Ins.ultiBtnFilled.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
         }
 
         private void Move(Direction dir)
@@ -228,6 +228,7 @@ namespace hyhy.RaidersOfChaos
         {
             base.TakeDamaged(dmg - m_curStat.defense, whoHit);
             if (IsDead || IsUlti) return;
+
             if (m_curHp > 0 && !m_isInvincible)
             {
                 ChangeState(PlayerState.Hit);

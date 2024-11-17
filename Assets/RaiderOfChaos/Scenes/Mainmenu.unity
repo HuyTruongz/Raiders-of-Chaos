@@ -2384,6 +2384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingDialog
       objectReference: {fileID: 0}
+    - target: {fileID: 4824724573597209456, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7248209194100102612, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecf3f061b439e9469e05be1cf68ef24, type: 3}
   m_Name: GameSetting
   m_EditorClassIdentifier: 
-  isOnMobile: 0
+  isOnMobile: 1
