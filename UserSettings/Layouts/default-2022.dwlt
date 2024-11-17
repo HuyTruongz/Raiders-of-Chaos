@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/RaiderOfChaos/Prefabs/Level/05
+    - Assets/RaiderOfChaos/Prefabs/Bullet
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -334,16 +334,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets/RaiderOfChaos/Prefabs/Level/05
+  - Assets/RaiderOfChaos/Prefabs/Bullet
   m_LastFoldersGridSize: 53
   m_LastProjectPath: E:\GitHub Desktop\Raiders-of-Chaos
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 410}
-    m_SelectedIDs: 9c6e0000
-    m_LastClickedID: 28316
-    m_ExpandedIDs: 00000000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e000000ca9a3b
+    scrollPos: {x: 0, y: 154}
+    m_SelectedIDs: 8a6e0000
+    m_LastClickedID: 28298
+    m_ExpandedIDs: 00000000f46d0000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00008a6e0000ce6e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -371,7 +371,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 0c6500000e650000
     m_LastClickedID: 25870
-    m_ExpandedIDs: 00000000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e00003c6e0000
+    m_ExpandedIDs: 00000000f46d0000f66d0000f86d0000fa6d0000fc6d0000fe6d0000006e0000026e0000046e0000066e0000086e00000a6e00000c6e00000e6e0000106e0000126e0000146e0000166e0000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e00002e6e0000306e0000326e0000346e0000366e0000386e00003a6e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -399,7 +399,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: a4620000486b000050640000a4650000867d0000967d0000a66500009e660000266400000c6a000050680000
+    m_ExpandedInstanceIDs: a4620000486b000050640000a4650000867d0000967d0000a66500009e660000266400000c6a000050680000be640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -809,9 +809,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.7918077, y: 1.5279202, z: 726.2466}
+    m_Target: {x: 1.454174, y: 2.2797437, z: 941.9137}
     speed: 2
-    m_Value: {x: -3.7918077, y: 1.5279202, z: 726.2466}
+    m_Value: {x: 1.0994841, y: 2.5282953, z: 989.9207}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -861,9 +861,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.722176
+    m_Target: 11.034347
     speed: 2
-    m_Value: 8.722176
+    m_Value: 11.55429
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1022,7 +1022,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 43870
+  m_LastSelectedObjectID: 59896
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1217,7 +1217,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 04fbfffff4ffffff
+      m_ExpandedIDs: b893feffe896feff8a9afeff7e9efeff7aa2fefff062ffff166cffffec9bffff34b7ffffe4deffffece2ffff0ce3ffff12e3ffff1ae3ffff5ce3ffff0ee5ffffcceaffff16fbfffff4ffffff2e7a00001497000016ca000056ca00008aca0000a6ca00000acc00004ecc000086cc000090cc0000bacc0000cacc000014cd000026cd0000524a0100d04a01000e4b0100884b01004a540100c65401000655010080550100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

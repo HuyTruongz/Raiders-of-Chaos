@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 173157623596310762809
   thumb: {fileID: 837821124, guid: 690d0d2cea9695944b78ff4203f7b53d, type: 3}
-  hp: 1
+  hp: 40
   damage: 3
   moveSpeed: 4
   jumpForce: 4
@@ -33,7 +33,7 @@ MonoBehaviour:
   level: 1
   playerLevel: 1
   xp: 0
-  lvUpxpRequired: 50
+  lvUpxpRequired: 15
   point: 0
   xpUpRate: 20
   atkSpeedRate: 1

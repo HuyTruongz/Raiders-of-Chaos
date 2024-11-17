@@ -888,7 +888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 542589702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4342764746468614603}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.Dialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &542589702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2348,9 +2360,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1117405218}
     m_Modifications:
+    - target: {fileID: 2366333443043998396, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366333443043998396, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4504582368427833968, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4504582368427833968, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4504582368427833968, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4824724573597209456, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_Name
       value: SettingDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248209194100102612, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248209194100102612, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8380116839253724975, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_Pivot.x
@@ -2432,11 +2472,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8880247713743153521, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880247713743153521, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880247713743153521, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+--- !u!114 &4342764746468614603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4774439860771641971, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+  m_PrefabInstance: {fileID: 4342764746468614602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a4088740958f34c9fccfe4d0a0e9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6367734294126872607
 PrefabInstance:
   m_ObjectHideFlags: 0

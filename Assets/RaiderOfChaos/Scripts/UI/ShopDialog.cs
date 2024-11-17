@@ -39,7 +39,6 @@ namespace hyhy.RaidersOfChaos
 
             m_items = ShopManager.Ins.items;
             m_curPlayerId = GameData.Ins.curPlayerId;
-
             UpdateUI();
             SwitchNavigatorSprite(true);
 
@@ -99,7 +98,7 @@ namespace hyhy.RaidersOfChaos
 
             if (lvCountingTxt)
             {
-                lvCountingTxt.text = $"Level {m_curStat.playerLevel}";
+                lvCountingTxt.text = $"Level Stat {m_curStat.level}";
             }
 
             if (pointTxt)
@@ -132,6 +131,16 @@ namespace hyhy.RaidersOfChaos
                 unlockBtn.gameObject.SetActive(!isUnlocked);
                 unlockBtn.onClick.RemoveAllListeners();
                 unlockBtn.onClick.AddListener(() => UnlockHero(item));
+            }
+
+            if (unlockBtnTxt)
+            {
+                unlockBtnTxt.text = item.Price.ToString();
+            }
+
+            if (upgradeBtnTxt)
+            {
+                upgradeBtnTxt.text = $"{m_curStat.pointRequired} PT";
             }
 
             if (upgaredeBtn)
@@ -175,11 +184,11 @@ namespace hyhy.RaidersOfChaos
             m_curStat.UpGrade(
                 () =>
                 {
-                    UpdateUI();
                     if (GameManager.Ins && GameManager.Ins.Player)
                     {
                         GameManager.Ins.Player.LoandStat();
                     }
+                    UpdateUI();
                     //phat am thanh
                 });
         }

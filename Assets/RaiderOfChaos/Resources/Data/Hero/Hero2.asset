@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hero2
   m_EditorClassIdentifier: 
   id: 172950839893835336062
-  thumb: {fileID: 1133090054, guid: c8a39661c9dcdf342923d5a7633ed7fc, type: 3}
+  thumb: {fileID: -1432174902, guid: 809500aaa8ef28f40a0fad56ad0916cf, type: 3}
   hp: 50
   damage: 4
   moveSpeed: 4
@@ -33,7 +33,7 @@ MonoBehaviour:
   level: 1
   playerLevel: 1
   xp: 0
-  lvUpxpRequired: 50
+  lvUpxpRequired: 15
   point: 0
   xpUpRate: 20
   atkSpeedRate: 1
