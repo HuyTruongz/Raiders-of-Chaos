@@ -250,6 +250,8 @@ namespace hyhy.RaidersOfChaos
                     GUIManager.Ins.UpdateHeroLevel(m_curStat.playerLevel);
                     GUIManager.Ins.UpdateHeroPoint(m_curStat.point);
                     GUIManager.Ins.hpBar.UpdateValue(m_curHp, m_curStat.hp);
+
+                    AudioController.Ins.PlaySound(AudioController.Ins.levelUp);
                 }));
         }
 
@@ -326,8 +328,6 @@ namespace hyhy.RaidersOfChaos
             {
                 Move(Direction.Right);
             }
-
-
         }
         private void Walk_Exit() { }
         private void Run_Enter() { }
@@ -340,6 +340,8 @@ namespace hyhy.RaidersOfChaos
         {
             m_rb.velocity = Vector3.zero;
             ChangeStateDelay(PlayerState.Idle);
+
+            AudioController.Ins.PlaySound(AudioController.Ins.attack);
         }
         private void Attack_Update()
         {
@@ -366,6 +368,8 @@ namespace hyhy.RaidersOfChaos
         {
             AIStat aiStat = (AIStat)m_whoHit.stat;
             AddEnergy(aiStat.EnergyBonus / 5);
+
+            AudioController.Ins.PlaySound(AudioController.Ins.gotHit);
         }
         private void Hit_Update()
         {
@@ -391,6 +395,8 @@ namespace hyhy.RaidersOfChaos
             ActiveCol(PlayerCollider.Dead);
             GameManager.Ins.Gameover();
             CamShake.ins.ShakeTrigger(0.2f,0.2f);
+
+            AudioController.Ins.PlaySound(AudioController.Ins.dead);
         }
         private void Dead_Update()
         {

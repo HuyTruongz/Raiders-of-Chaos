@@ -173,7 +173,7 @@ namespace hyhy.RaidersOfChaos
                 {
                     GameManager.Ins.ChangPlayer();
                 }
-
+                AudioController.Ins.PlaySound(AudioController.Ins.unlock);
             }
         }
 
@@ -189,7 +189,8 @@ namespace hyhy.RaidersOfChaos
                         GameManager.Ins.Player.LoandStat();
                     }
                     UpdateUI();
-                    //phat am thanh
+
+                    AudioController.Ins.PlaySound(AudioController.Ins.upgrade);
                 });
         }
 

@@ -76,6 +76,8 @@ namespace hyhy.RaidersOfChaos
 
             GUIManager.Ins.UpdateCoinCounting();
             GUIManager.Ins.ShowMobileGamePad(setting.isOnMobile);
+
+            AudioController.Ins.PlayBackgroundMusic();
         }
 
         public void ChangPlayer()
@@ -94,6 +96,7 @@ namespace hyhy.RaidersOfChaos
             GUIManager.Ins.energyBar.UpdateValue(m_player.CurEnergy, m_player.CurStat.ultiEnergy);
             GUIManager.Ins.UpdateHeroPoint(m_player.CurStat.point);
             GUIManager.Ins.UpdateHeroLevel(m_player.CurStat.playerLevel);
+            StartCoroutine(CamFollowDelay());
         }
 
         public void AddCoin(int coinToAdd)
@@ -141,7 +144,7 @@ namespace hyhy.RaidersOfChaos
             CameraFollow.ins.target = m_player.transform;
         }
 
-        #region
+        #region FSM
         private void Staring_Enter() { }
         private void Staring_Update() { }
         private void Staring_Exit() { }
@@ -162,12 +165,14 @@ namespace hyhy.RaidersOfChaos
             GameData.Ins.curLevelId++;
             GameData.Ins.UpdateLevelUnlocked(GameData.Ins.curLevelId,true);
             GameData.Ins.SaveData();
+
+            AudioController.Ins.PlaySound(AudioController.Ins.completed);
         }
         private void Wining_Update() { }
         private void Wining_Exit() { }
         private void Gameover_Enter()
         {
-
+            AudioController.Ins.PlaySound(AudioController.Ins.fail);
         }
         private void Gameover_Update() { }
         private void Gameover_Exit() { }

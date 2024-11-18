@@ -22,6 +22,7 @@ namespace hyhy.RaidersOfChaos
             if (owner)
             {
                 owner.Dash();
+                AudioController.Ins.PlaySound(AudioController.Ins.dash);
             }
         }
 
@@ -57,7 +58,7 @@ namespace hyhy.RaidersOfChaos
 
         public void PlayFootstepSound()
         {
-
+            AudioController.Ins.PlaySound(AudioController.Ins.footSteps);
         }
     }
 }

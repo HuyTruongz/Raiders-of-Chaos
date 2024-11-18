@@ -169,4 +169,4 @@ MonoBehaviour:
   shakeFreq: 0
   shakeAmp: 1
   sounds:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: ec4f038b01d13bd44b16674cb0575d79, type: 3}

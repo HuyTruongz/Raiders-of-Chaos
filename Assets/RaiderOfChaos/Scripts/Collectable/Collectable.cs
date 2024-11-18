@@ -36,7 +36,7 @@ namespace hyhy.RaidersOfChaos
 
         public virtual void Init()
         {
-           gameObject.layer = normalLayer;
+            gameObject.layer = normalLayer;
 
             m_isNotMoving = false;
             m_player = GameManager.Ins.Player;
@@ -57,7 +57,7 @@ namespace hyhy.RaidersOfChaos
             {
                 gameObject.SetActive(false);
             });
-            
+
             StartCoroutine(CountingDown());
         }
 
@@ -69,7 +69,8 @@ namespace hyhy.RaidersOfChaos
                 gameObject.SetActive(false);
             }
 
-           gameObject.layer = collectedLayer;
+            gameObject.layer = collectedLayer;
+            AudioController.Ins.PlaySound(hitSound);
         }
 
         protected virtual void TriggerCore()

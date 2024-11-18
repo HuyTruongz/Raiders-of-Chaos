@@ -19,6 +19,8 @@ namespace hyhy.RaidersOfChaos
                 GameData.Ins.SaveData();
             }
 
+            AudioController.Ins.PlayMusic(AudioController.Ins.menus);
+
             Pref.IsFirstTime = false;
         }
     }
