@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 6166516414774942900}
   - component: {fileID: -5293181911917102113}
   - component: {fileID: -7232320659347170397}
+  - component: {fileID: -7859726962397892180}
   m_Layer: 0
   m_Name: UltiEnemy4
   m_TagString: Untagged
@@ -173,3 +174,21 @@ MonoBehaviour:
   disableOnly: 1
   delay: 1
   isOverride: 0
+--- !u!114 &-7859726962397892180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010946155089409756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605870ad5c6808543b56f185bbb91216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCamShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmp: 1
+  sounds:
+  - {fileID: 8300000, guid: ec4f038b01d13bd44b16674cb0575d79, type: 3}

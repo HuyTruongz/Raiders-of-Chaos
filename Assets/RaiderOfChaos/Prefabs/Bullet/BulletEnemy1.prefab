@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5985702452138914573}
   - component: {fileID: 1811615107223557686}
   - component: {fileID: 7996850331001951229}
+  - component: {fileID: -6578937830789103628}
   m_Layer: 0
   m_Name: BulletEnemy1
   m_TagString: Untagged
@@ -67,6 +68,24 @@ MonoBehaviour:
   disableOnly: 1
   delay: 1
   isOverride: 0
+--- !u!114 &-6578937830789103628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504446654307289844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605870ad5c6808543b56f185bbb91216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCamShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmp: 1
+  sounds:
+  - {fileID: 8300000, guid: ec4f038b01d13bd44b16674cb0575d79, type: 3}
 --- !u!1 &9140326206962858500
 GameObject:
   m_ObjectHideFlags: 0

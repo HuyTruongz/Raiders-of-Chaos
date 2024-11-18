@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 3550149408670654602}
   - component: {fileID: -4725968427224576487}
   - component: {fileID: -9047290611350334610}
+  - component: {fileID: 6067307948790719511}
   m_Layer: 0
   m_Name: UltimateHero1
   m_TagString: Untagged
@@ -173,3 +174,21 @@ MonoBehaviour:
   disableOnly: 1
   delay: 1
   isOverride: 0
+--- !u!114 &6067307948790719511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200393666780070297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605870ad5c6808543b56f185bbb91216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCamShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmp: 1
+  sounds:
+  - {fileID: 8300000, guid: ec4f038b01d13bd44b16674cb0575d79, type: 3}

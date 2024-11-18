@@ -116,7 +116,7 @@ MonoBehaviour:
   spawnForce: 8
   collectedLayer: 12
   normalLayer: 10
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: e4d27ed7c23d6554ba73e5118b1b3a32, type: 3}
   deactiveWhenHitted: 1
 --- !u!114 &8720917651087962186
 MonoBehaviour:

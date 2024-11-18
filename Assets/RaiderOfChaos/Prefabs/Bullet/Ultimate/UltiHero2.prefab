@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 741739779882045760}
   - component: {fileID: 8543988710631467987}
   - component: {fileID: 6830470163884018763}
+  - component: {fileID: 9219753815103473878}
   m_Layer: 0
   m_Name: UltiHero2
   m_TagString: Untagged
@@ -67,6 +68,24 @@ MonoBehaviour:
   disableOnly: 1
   delay: 1
   isOverride: 0
+--- !u!114 &9219753815103473878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053508407364223364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605870ad5c6808543b56f185bbb91216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useCamShake: 0
+  shakeDur: 0
+  shakeFreq: 0
+  shakeAmp: 1
+  sounds:
+  - {fileID: 8300000, guid: ec4f038b01d13bd44b16674cb0575d79, type: 3}
 --- !u!1 &4576424782719068482
 GameObject:
   m_ObjectHideFlags: 0
