@@ -14,7 +14,6 @@ namespace hyhy.RaidersOfChaos
         public override void Show(bool isShow)
         {
             base.Show(isShow);
-            Time.timeScale = 0f;
             UpdateUI();
         }
 
@@ -70,7 +69,6 @@ namespace hyhy.RaidersOfChaos
         public override void Close()
         {
             base.Close();
-            Time.timeScale = 1f;
         }
     }
 }

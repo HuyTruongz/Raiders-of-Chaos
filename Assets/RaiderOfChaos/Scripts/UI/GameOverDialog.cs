@@ -30,5 +30,11 @@ namespace hyhy.RaidersOfChaos
             Close();
             GameManager.Ins.Replay();
         }
+
+        public void BackHome()
+        {
+            Time.timeScale = 1f;
+            SceneController.Ins.LoanScene(GameScene.MainMenu.ToString());
+        }
     }
 }

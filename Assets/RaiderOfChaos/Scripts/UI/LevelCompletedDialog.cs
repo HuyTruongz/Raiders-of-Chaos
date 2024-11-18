@@ -44,10 +44,10 @@ namespace hyhy.RaidersOfChaos
             }
         }
 
-        public void Replay()
+        public void BackHome()
         {
-            Close();
-            GameManager.Ins.Replay();
+            Time.timeScale = 1f;
+            SceneController.Ins.LoanScene(GameScene.MainMenu.ToString());
         }
 
         public void NextLevel()

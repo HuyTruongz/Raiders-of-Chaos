@@ -322,6 +322,11 @@ namespace hyhy.RaidersOfChaos
                 GUIManager.Ins.waveBar.UpdateValue(waveCtrl.CurrentWave.enemyKilled,waveCtrl.CurrentWave.totalEnemy);
             }
 
+            if (isBoss)
+            {
+                GUIManager.Ins.bossHpBar.Show(false);
+            }
+
             float luckChecking = UnityEngine.Random.Range(0f, 1f);
             if (luckChecking <= m_player.CurStat.luck)
             {
