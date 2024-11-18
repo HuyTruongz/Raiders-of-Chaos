@@ -22,7 +22,7 @@ MonoBehaviour:
   knockbackTime: 0.2
   invincibleTime: 0.35
   atkRate: 1
-  dashRate: 0.3
+  dashRate: 0.15
   ultiRate: 0.05
   atkTime: 2
   ultiTime: 5

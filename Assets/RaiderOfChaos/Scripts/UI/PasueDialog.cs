@@ -17,5 +17,17 @@ namespace hyhy.RaidersOfChaos
             base.Close();
             Time.timeScale = 1f;
         }
+
+        public void Replay()
+        {
+            Close();
+            GameManager.Ins.Replay();
+        }
+
+        public void Resume()
+        {
+            Close();
+            Time.timeScale = 1f;
+        }
     }
 }

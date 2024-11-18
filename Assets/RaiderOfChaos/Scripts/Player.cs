@@ -64,9 +64,9 @@ namespace hyhy.RaidersOfChaos
         private void Update()
         {
             LimitHozMoving();
-            if(m_isInvincible || m_isKnockBack)
+            if(m_isInvincible || m_isKnockBack || m_whoHit)
             {
-                float mapSpeed = m_isFacingLeft ? -m_curStat.knockbackForce : m_curStat.knockbackForce;
+                float mapSpeed = m_whoHit.transform.position.x - transform.position.x > 0 ? m_curStat.knockbackForce : -m_curStat.knockbackForce;
                 GameManager.Ins.SetMapSpeed(mapSpeed);
             }
             ActionHandle();
@@ -343,6 +343,7 @@ namespace hyhy.RaidersOfChaos
         }
         private void Attack_Update()
         {
+            GameManager.Ins.SetMapSpeed(0);
             Helper.PlayAnim(m_amin, PlayerState.Attack.ToString());
         }
         private void Attack_Exit()
@@ -401,13 +402,14 @@ namespace hyhy.RaidersOfChaos
         private void Ultimate_Enter()
         {
             m_curEnergy -= m_curStat.ultiEnergy;
-            m_curDmg = m_curStat.damage + m_curStat.damage * 0.3f;
+            m_curDmg = m_curStat.damage + m_curStat.damage * 0.5f;
             ChangeStateDelay(PlayerState.Idle);
 
             GUIManager.Ins.energyBar.UpdateValue(m_curEnergy, m_curStat.ultiEnergy);
         }
         private void Ultimate_Update()
         {
+            GameManager.Ins.SetMapSpeed(0);
             Helper.PlayAnim(m_amin, PlayerState.Ultimate.ToString());
         }
         private void Ultimate_Exit()

@@ -24,7 +24,7 @@ MonoBehaviour:
   runSpeed: 6
   atkSpeed: 1.5
   atkRate: 0.1
-  dashRate: 0.1
+  dashRate: 0.5
   dashDist: 2.5
   ultiEnergy: 40
   defense: 0.4
@@ -32,8 +32,8 @@ MonoBehaviour:
   maxLevel: 50
   level: 1
   playerLevel: 2
-  xp: 2.0686226
-  lvUpxpRequired: 25
+  xp: 6.2034254
+  lvUpxpRequired: 20
   point: 1
   xpUpRate: 20
   atkSpeedRate: 1

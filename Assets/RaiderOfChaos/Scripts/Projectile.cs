@@ -24,21 +24,15 @@ namespace hyhy.RaidersOfChaos
         private RaycastHit2D m_hit;
         private Vector2 m_dir;
 
-        private void Update()
-        {
-            transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
-        }
-
-        private void FixedUpdate()
-        {
-            DealDamage();
-
-            RefereshLastPos();
-        }
-
         private void OnEnable()
         {
             RefereshLastPos();
+        }
+
+        private void Update()
+        {
+            transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
+            DealDamage();
         }
 
         public void DealDamage()
@@ -52,7 +46,6 @@ namespace hyhy.RaidersOfChaos
             if(!m_hit && !m_hit.collider) return;
 
             var col = m_hit.collider;
-
             Checking(col);
         }
 

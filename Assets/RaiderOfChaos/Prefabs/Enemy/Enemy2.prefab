@@ -196,10 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9da6019e5101842952d44f10d0d312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0.091
+  rate: 1
   projectilePool: 1730979161:447083:813434
-  speed: 0
-  firePoints: []
+  speed: 7
+  firePoints:
+  - {fileID: 3048127434979090844}
 --- !u!1 &2614513241281752246
 GameObject:
   m_ObjectHideFlags: 0

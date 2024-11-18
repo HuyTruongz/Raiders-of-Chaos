@@ -1405,7 +1405,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205867776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8379107556220721798}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.PasueDialog, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &205867776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,7 +1856,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334258041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 819896469}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.LevelDialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &334258041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1989,6 +2013,7 @@ GameObject:
   - component: {fileID: 380270440}
   - component: {fileID: 380270442}
   - component: {fileID: 380270441}
+  - component: {fileID: 380270443}
   m_Layer: 5
   m_Name: Stars_M
   m_TagString: Untagged
@@ -2053,6 +2078,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380270439}
   m_CullTransparentMesh: 1
+--- !u!95 &380270443
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380270439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &381768717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,7 +3739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616352797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356657756}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.LevelCompletedDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &616352797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5234,6 +5292,7 @@ GameObject:
   - component: {fileID: 833390063}
   - component: {fileID: 833390065}
   - component: {fileID: 833390064}
+  - component: {fileID: 833390066}
   m_Layer: 5
   m_Name: Stars_R
   m_TagString: Untagged
@@ -5298,6 +5357,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833390062}
   m_CullTransparentMesh: 1
+--- !u!95 &833390066
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833390062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &846812518
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,7 +5943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 940956750}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8379107556220721798}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.PasueDialog, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &940956750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6069,7 +6161,7 @@ MonoBehaviour:
   missionCompletedTxt: {fileID: 578131090}
   youDeiTxt: {fileID: 107967207}
   coinMovingDest: {fileID: 1921581493}
-  completedDialog: {fileID: 0}
+  completedDialog: {fileID: 1356657756}
   gameoverDialog: {fileID: 40006084}
 --- !u!4 &982175059
 Transform:
@@ -7181,6 +7273,7 @@ GameObject:
   - component: {fileID: 1356657753}
   - component: {fileID: 1356657755}
   - component: {fileID: 1356657754}
+  - component: {fileID: 1356657756}
   m_Layer: 5
   m_Name: CompletedDialog
   m_TagString: Untagged
@@ -7246,6 +7339,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356657752}
   m_CullTransparentMesh: 1
+--- !u!114 &1356657756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356657752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ac901a732aa214aa88d5ef760052b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  stars:
+  - {fileID: 1488708232}
+  - {fileID: 1919325055}
+  - {fileID: 1477734443}
+  gamePlayTimeTxt: {fileID: 1177197944}
+  bonusTxt: {fileID: 471815699}
+  activeStar: {fileID: 1533701260, guid: 10805073aa9476f449323c1b6cba5520, type: 3}
+  deactiveStar: {fileID: -1074088242, guid: f00611f1c9cc1e84fa84123b745ddf02, type: 3}
 --- !u!1 &1376240268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7726,6 +7841,7 @@ GameObject:
   - component: {fileID: 1477734442}
   - component: {fileID: 1477734444}
   - component: {fileID: 1477734443}
+  - component: {fileID: 1477734445}
   m_Layer: 5
   m_Name: Stars_R
   m_TagString: Untagged
@@ -7790,6 +7906,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477734441}
   m_CullTransparentMesh: 1
+--- !u!95 &1477734445
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477734441}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1488708230
 GameObject:
   m_ObjectHideFlags: 0
@@ -7801,6 +7938,7 @@ GameObject:
   - component: {fileID: 1488708231}
   - component: {fileID: 1488708233}
   - component: {fileID: 1488708232}
+  - component: {fileID: 1488708234}
   m_Layer: 5
   m_Name: Stars_L
   m_TagString: Untagged
@@ -7865,6 +8003,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488708230}
   m_CullTransparentMesh: 1
+--- !u!95 &1488708234
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488708230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1490766440
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,7 +8227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1553035491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 819896469}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.LevelDialog, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1553035491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8623,7 +8794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714688312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356657756}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.LevelCompletedDialog, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1714688312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9296,6 +9479,7 @@ GameObject:
   - component: {fileID: 1919325054}
   - component: {fileID: 1919325056}
   - component: {fileID: 1919325055}
+  - component: {fileID: 1919325057}
   m_Layer: 5
   m_Name: Stars_M
   m_TagString: Untagged
@@ -9360,6 +9544,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919325053}
   m_CullTransparentMesh: 1
+--- !u!95 &1919325057
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919325053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1921581492
 GameObject:
   m_ObjectHideFlags: 0
@@ -10044,6 +10249,7 @@ GameObject:
   - component: {fileID: 2042329891}
   - component: {fileID: 2042329893}
   - component: {fileID: 2042329892}
+  - component: {fileID: 2042329894}
   m_Layer: 5
   m_Name: Stars_L
   m_TagString: Untagged
@@ -10108,6 +10314,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042329890}
   m_CullTransparentMesh: 1
+--- !u!95 &2042329894
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042329890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82413e2ccef4d61409c6d635b03fa95f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2106678177
 GameObject:
   m_ObjectHideFlags: 0

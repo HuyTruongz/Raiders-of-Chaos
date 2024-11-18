@@ -297,7 +297,8 @@ MonoBehaviour:
   rate: 1
   projectilePool: 1730979168:659123:403890
   speed: 7
-  firePoints: []
+  firePoints:
+  - {fileID: 1531153574580717700}
 --- !u!1 &6620910469022408061
 GameObject:
   m_ObjectHideFlags: 0

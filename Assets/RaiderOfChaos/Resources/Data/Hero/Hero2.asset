@@ -24,7 +24,7 @@ MonoBehaviour:
   runSpeed: 6
   atkSpeed: 1.5
   atkRate: 0.1
-  dashRate: 0.1
+  dashRate: 0.5
   dashDist: 2.5
   ultiEnergy: 40
   defense: 0.8
