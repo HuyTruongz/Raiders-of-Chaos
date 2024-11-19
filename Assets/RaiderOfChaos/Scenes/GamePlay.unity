@@ -1662,10 +1662,10 @@ RectTransform:
   - {fileID: 511514315}
   m_Father: {fileID: 1721040234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 425, y: -75}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285247272
 MonoBehaviour:
@@ -2350,10 +2350,10 @@ RectTransform:
   - {fileID: 805263813}
   m_Father: {fileID: 1721040234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -75}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425444959
 MonoBehaviour:
@@ -7104,9 +7104,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379107556220721798}
-        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.Dialog, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 8379107556220721799}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7878,8 +7878,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8379107556220721798}
-        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.Dialog, Assembly-CSharp
+      - m_Target: {fileID: 8379107556220721799}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
         m_MethodName: Show
         m_Mode: 6
         m_Arguments:
@@ -9166,7 +9166,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -274, y: 150}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721040235
 MonoBehaviour:
@@ -10435,7 +10435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1943415930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10850,10 +10850,10 @@ RectTransform:
   - {fileID: 1593074620}
   m_Father: {fileID: 1721040234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -75}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106678179
 MonoBehaviour:
@@ -11075,7 +11075,19 @@ MonoBehaviour:
   m_Value: 0.601
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8379107556220721799}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+        m_MethodName: OnMusicChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &400888290216286001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11965,7 +11977,19 @@ MonoBehaviour:
   m_Value: 0.242
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8379107556220721799}
+        m_TargetAssemblyTypeName: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+        m_MethodName: OnSoundChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4413973210110864266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12610,6 +12634,7 @@ GameObject:
   - component: {fileID: 4700398020725040252}
   - component: {fileID: 6383785886799391066}
   - component: {fileID: 8379107556220721798}
+  - component: {fileID: 8379107556220721799}
   m_Layer: 5
   m_Name: PauseDialog
   m_TagString: Untagged
@@ -12631,6 +12656,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 0}
   contentText: {fileID: 0}
+--- !u!114 &8379107556220721799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379107556220721797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a4088740958f34c9fccfe4d0a0e9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 0}
+  contentText: {fileID: 0}
+  musicSlider: {fileID: 130291824460807980}
+  soundSlider: {fileID: 4397670786414387204}
 --- !u!1 &8431701255514285416
 GameObject:
   m_ObjectHideFlags: 0

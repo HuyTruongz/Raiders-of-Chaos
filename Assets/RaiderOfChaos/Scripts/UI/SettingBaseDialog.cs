@@ -25,6 +25,8 @@ namespace hyhy.RaidersOfChaos
                 soundSlider.value = GameData.Ins.soundVol;
                 AudioController.Ins.SetSoundVolume(GameData.Ins.soundVol);
             }
+
+            Time.timeScale = 0;
         }
 
         public void OnMusicChange(float value)
@@ -42,6 +44,7 @@ namespace hyhy.RaidersOfChaos
             GameData.Ins.musicVol = AudioController.Ins.musicVolume;
             GameData.Ins.soundVol = AudioController.Ins.sfxVolume;
             GameData.Ins.SaveData();
+            Time.timeScale = 1;
             Close();
         }
     }

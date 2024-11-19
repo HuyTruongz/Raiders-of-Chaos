@@ -64,7 +64,7 @@ namespace hyhy.RaidersOfChaos
         private void Update()
         {
             LimitHozMoving();
-            if(m_isInvincible || m_isKnockBack || m_whoHit)
+            if(m_isKnockBack)
             {
                 float mapSpeed = m_whoHit.transform.position.x - transform.position.x > 0 ? m_curStat.knockbackForce : -m_curStat.knockbackForce;
                 GameManager.Ins.SetMapSpeed(mapSpeed);

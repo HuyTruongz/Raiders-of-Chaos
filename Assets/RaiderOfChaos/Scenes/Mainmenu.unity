@@ -2757,6 +2757,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1117405218}
     m_Modifications:
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4342764746468614603}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSoundChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2366333443043998396, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2764,6 +2792,42 @@ PrefabInstance:
     - target: {fileID: 2366333443043998396, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840998885837213745, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840998885837213745, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4342764746468614603}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMusicChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: hyhy.RaidersOfChaos.SettingBaseDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4504582368427833968, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2777,6 +2841,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4774439860771641971, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 4342764746468614605}
+    - target: {fileID: 4774439860771641971, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+      propertyPath: soundSlider
+      value: 
+      objectReference: {fileID: 4342764746468614604}
     - target: {fileID: 4824724573597209456, guid: 248028e3deae3fa4d9686441de380204, type: 3}
       propertyPath: m_Name
       value: SettingDialog
@@ -2902,6 +2974,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45a4088740958f34c9fccfe4d0a0e9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4342764746468614604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 845523091602303473, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+  m_PrefabInstance: {fileID: 4342764746468614602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4342764746468614605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3995448488326362841, guid: 248028e3deae3fa4d9686441de380204, type: 3}
+  m_PrefabInstance: {fileID: 4342764746468614602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6367734294126872607
