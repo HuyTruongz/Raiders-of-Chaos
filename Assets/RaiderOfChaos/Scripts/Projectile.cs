@@ -8,7 +8,7 @@ namespace hyhy.RaidersOfChaos
 {
     public class Projectile : MonoBehaviour, IDamageCreater
     {
-        [Header("Base Setting:")]
+        [Header("Base Setting: ")]
         public GameTag damageTo;
         public float speed;
         public float damage;
@@ -18,21 +18,27 @@ namespace hyhy.RaidersOfChaos
         public string bodyHitPool;
 
         [HideInInspector]
-        public Actor owner;
+        public Actor owenr;
 
         private Vector2 m_prevPos;
-        private RaycastHit2D m_hit;
+        private RaycastHit2D[] m_hit;
         private Vector2 m_dir;
 
         private void OnEnable()
         {
-            RefereshLastPos();
+            RefreshLastPos();
         }
 
         private void Update()
         {
             transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
+        }
+
+        private void FixedUpdate()
+        {
             DealDamage();
+
+            RefreshLastPos();
         }
 
         public void DealDamage()
@@ -41,48 +47,43 @@ namespace hyhy.RaidersOfChaos
             float distance = m_dir.magnitude;
             m_dir.Normalize();
 
-            m_hit = Physics2D.Raycast(m_prevPos, m_dir, distance);
+            m_hit = Physics2D.RaycastAll(m_prevPos, m_dir, distance);
 
-            if(!m_hit && !m_hit.collider) return;
+            if(m_hit == null || m_hit.Length <= 0) return;
 
-            var col = m_hit.collider;
-            Checking(col);
-        }
-
-        private void Checking(Collider2D col)
-        {
-            if (col.CompareTag(damageTo.ToString()))
+            for(int i = 0; i < m_hit.Length; i++)
             {
-                Actor actor = col.GetComponent<Actor>();
-
-                if(!actor) return;
-
-                actor.WhoHit = owner;
-                actor.TakeDamaged(damage,owner);
-
-                //var rotate = transform.localScale.x < 0 ?
-                //    Quaternion.Inverse(transform.rotation) : 
-                //    transform.rotation;
-
-                PoolersManager.Ins.Spawn(PoolerTarget.NONE, bodyHitPool, m_hit.transform.position
-                   , Quaternion.identity);
-
-                if (deactiveWhenHitted)
+                var hit = m_hit[i];
+                if(hit.collider == null) continue;
+                if (hit.collider.CompareTag(damageTo.ToString()))
                 {
-                    gameObject.SetActive(false);
+                    Actor actor = hit.collider.GetComponent<Actor>();
+
+                    if (!actor) return;
+
+                    actor.WhoHit = owenr;
+                    actor.TakeDamaged(damage, owenr);
+
+                    PoolersManager.Ins.Spawn(PoolerTarget.NONE, bodyHitPool, hit.transform.position, Quaternion.identity);
+
+                    if (deactiveWhenHitted)
+                    {
+                        gameObject.SetActive(false);
+                    }
                 }
             }
+
         }
 
-        private void RefereshLastPos()
+        private void RefreshLastPos()
         {
             m_prevPos = (Vector2)transform.position;
         }
 
         private void OnDisable()
         {
-            m_hit = new RaycastHit2D();
-            transform.position = new Vector3(1000f,1000f,0);
+            m_hit = new RaycastHit2D[0];
+            transform.position = new Vector3(1000f, 1000f, 0);
         }
     }
 

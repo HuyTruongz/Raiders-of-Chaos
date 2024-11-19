@@ -157,7 +157,7 @@ MonoBehaviour:
   speed: 7
   damage: 0
   deactiveWhenHitted: 0
-  bodyHitPool: None
+  bodyHitPool: 1730979505:792271:487384
   owner: {fileID: 0}
 --- !u!114 &-3613969072553551750
 MonoBehaviour:

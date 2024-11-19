@@ -10,11 +10,13 @@ namespace hyhy.RaidersOfChaos
         public void LoandGamePlay()
         {
             SceneManager.LoadScene(GameScene.Gameplay.ToString());
+            Time.timeScale = 1f;
         }
 
         public void LoanScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+            Time.timeScale = 1f;
         }
     }
 }

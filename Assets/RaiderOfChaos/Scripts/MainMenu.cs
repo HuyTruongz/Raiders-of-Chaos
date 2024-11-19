@@ -18,7 +18,7 @@ namespace hyhy.RaidersOfChaos
                 LevelManager.Ins.Init();
                 GameData.Ins.SaveData();
             }
-
+            AudioController.Ins.StopPlayMusic();
             AudioController.Ins.PlayMusic(AudioController.Ins.menus);
 
             Pref.IsFirstTime = false;

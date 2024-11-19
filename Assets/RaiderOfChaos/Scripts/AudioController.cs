@@ -27,8 +27,8 @@ namespace hyhy.RaidersOfChaos
         public AudioClip enemyDead;
         public AudioClip unlock;
         public AudioClip upgrade;
-        public AudioClip completed;
-        public AudioClip fail;
+        public AudioClip[] completed;
+        public AudioClip[] fail;
         public AudioClip btnClick;
         public AudioClip[] bgms;
         public AudioClip[] menus;

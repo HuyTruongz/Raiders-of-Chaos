@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - spawn: 1730979265:581326:4040
-    weight: 2
+    weight: 1
   - spawn: 1730979274:579744:75587
-    weight: 0
-  total: 2
+    weight: 3
+  total: 4
   icon: {fileID: 2800000, guid: d53f7eedc0ed8b8479d93e7709e7175e, type: 3}

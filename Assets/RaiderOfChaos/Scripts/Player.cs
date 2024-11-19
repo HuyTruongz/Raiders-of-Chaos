@@ -407,6 +407,7 @@ namespace hyhy.RaidersOfChaos
         private void Dead_Exit() { }
         private void Ultimate_Enter()
         {
+            m_rb.velocity = Vector3.zero;
             m_curEnergy -= m_curStat.ultiEnergy;
             m_curDmg = m_curStat.damage + m_curStat.damage * 0.5f;
             ChangeStateDelay(PlayerState.Idle);

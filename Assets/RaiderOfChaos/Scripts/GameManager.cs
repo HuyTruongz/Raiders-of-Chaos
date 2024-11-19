@@ -166,13 +166,11 @@ namespace hyhy.RaidersOfChaos
             GameData.Ins.UpdateLevelUnlocked(GameData.Ins.curLevelId,true);
             GameData.Ins.SaveData();
 
-            AudioController.Ins.PlaySound(AudioController.Ins.completed);
         }
         private void Wining_Update() { }
         private void Wining_Exit() { }
         private void Gameover_Enter()
         {
-            AudioController.Ins.PlaySound(AudioController.Ins.fail);
         }
         private void Gameover_Update() { }
         private void Gameover_Exit() { }

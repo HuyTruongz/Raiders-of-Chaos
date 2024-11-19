@@ -31,7 +31,7 @@ namespace hyhy.RaidersOfChaos
                 Projectile pComp = arrow.GetComponent<Projectile>();
                 if (pComp)
                 {
-                    pComp.owner = m_owner;
+                    pComp.owenr = m_owner;
                     pComp.damage = m_owner.CurDmg;
                     if(weaponSpeed > 0)
                     {

@@ -32,7 +32,7 @@ namespace hyhy.RaidersOfChaos
                 }
 
                 pComp.damage = m_owner.CurDmg;
-                pComp.owner = m_owner;
+                pComp.owenr = m_owner;
 
                 if (point.position.x < m_owner.transform.position.x)
                 {

@@ -348,6 +348,7 @@ namespace hyhy.RaidersOfChaos
         private void Hit_Enter()
         {
             GUIManager.Ins.dmgTxtMng.Add($"- {m_dmgTaked.ToString("f2")}",transform,"ai_damage");
+            m_player.AddEnergy(m_curStat.EnergyBonus / 5);
         }
         private void Hit_Update()
         {
