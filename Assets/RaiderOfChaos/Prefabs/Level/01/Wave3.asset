@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - behaviour: 0
-    enemy: 1730979274:579744:75587
+    enemy: 1730979265:581326:4040
     enemySet: {fileID: 11400000, guid: 5cefb5d6845a3f54eb4d5d63ef1198d9, type: 2}
     randomEnemy: 0
     bulkElements: 5
@@ -24,5 +24,5 @@ MonoBehaviour:
     isBoss: 1
     vis: 1
   icon: {fileID: 2800000, guid: e5e56e49e68cea7439232476af8930f0, type: 3}
-  totalEnemy: 0
+  totalEnemy: 1
   enemyKilled: 0
