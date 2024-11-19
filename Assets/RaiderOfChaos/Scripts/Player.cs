@@ -140,7 +140,7 @@ namespace hyhy.RaidersOfChaos
 
                 m_hozDir = dir == Direction.Left ? -1 : 1;
 
-                if (GameManager.Ins.setting.isOnMobile)
+                if (GameData.Ins.m_isOnMobile)
                 {
                     m_rb.velocity = new Vector2(GamepadManager.Ins.joystick.xValue * m_curSpeed, m_rb.velocity.y);
                 }

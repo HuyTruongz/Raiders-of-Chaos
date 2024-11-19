@@ -6,6 +6,7 @@ namespace hyhy.RaidersOfChaos
 {
     public class GameData : Singleton<GameData>
     {
+        public bool m_isOnMobile;
         public int coin;
         public int curLevelId;
         public int curPlayerId;

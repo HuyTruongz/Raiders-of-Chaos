@@ -8,5 +8,6 @@ namespace hyhy.RaidersOfChaos
     public class GamePlaySetting : ScriptableObject
     {
         public bool isOnMobile;
+
     }
 }

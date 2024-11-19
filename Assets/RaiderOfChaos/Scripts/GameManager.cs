@@ -7,7 +7,7 @@ namespace hyhy.RaidersOfChaos
 {
     public class GameManager : Singleton<GameManager>
     {
-        public GamePlaySetting setting;
+        //public GamePlaySetting setting;
         private Player m_player;
         private FreeParallax m_map;
         private WavePlayer m_waveCtr;
@@ -39,6 +39,11 @@ namespace hyhy.RaidersOfChaos
         {
             Init();
             StartCoroutine(CamFollowDelay());
+        }
+
+        private void Update()
+        {
+            GUIManager.Ins.ShowMobileGamePad(GameData.Ins.m_isOnMobile);
         }
 
         public void Init()
@@ -75,7 +80,7 @@ namespace hyhy.RaidersOfChaos
             Pref.SpriteOrder = 0;
 
             GUIManager.Ins.UpdateCoinCounting();
-            GUIManager.Ins.ShowMobileGamePad(setting.isOnMobile);
+           
 
             AudioController.Ins.PlayBackgroundMusic();
         }

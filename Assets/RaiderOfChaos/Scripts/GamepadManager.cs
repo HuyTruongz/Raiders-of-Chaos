@@ -33,7 +33,7 @@ namespace hyhy.RaidersOfChaos
 
         private void Update()
         {
-            if (!GameManager.Ins.setting.isOnMobile)
+            if (!GameData.Ins.m_isOnMobile)
             {
                 float hozCheking = Input.GetAxisRaw("Horizontal");
                 float verChecking = Input.GetAxisRaw("Vertical");

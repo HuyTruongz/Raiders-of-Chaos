@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MonsterLove.StateMachine;
 using System;
-using static UnityEditor.PlayerSettings;
 
 namespace hyhy.RaidersOfChaos
 {
