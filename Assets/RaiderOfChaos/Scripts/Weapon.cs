@@ -36,7 +36,7 @@ namespace hyhy.RaidersOfChaos
         {
             if (m_owner == null) return;
 
-            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position + offset, atkRadius, targetLayer);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position + offset,(m_owner.transform.localScale.x) / atkRadius, targetLayer);
 
             if (cols == null || cols.Length <= 0) return;
 
@@ -66,7 +66,7 @@ namespace hyhy.RaidersOfChaos
         private void OnDrawGizmos()
         {
             Gizmos.color = Helper.ChangAlpha(Color.yellow, 0.4f);
-            Gizmos.DrawSphere(transform.position + offset, atkRadius);
+            Gizmos.DrawSphere(transform.position + offset, (m_owner.transform.localScale.x) /atkRadius);
         }
 
     }

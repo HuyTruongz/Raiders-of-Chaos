@@ -79,7 +79,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
-  atkRadius: 0.4
+  atkRadius: 2.2
   offset: {x: 0, y: 0, z: 0}
   m_owner: {fileID: 7356468245046176506}
   damage: 0

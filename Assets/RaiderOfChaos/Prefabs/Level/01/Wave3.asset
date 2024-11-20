@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - behaviour: 0
-    enemy: 1730979265:581326:4040
+    enemy: 1730979274:579744:75587
     enemySet: {fileID: 11400000, guid: 5cefb5d6845a3f54eb4d5d63ef1198d9, type: 2}
     randomEnemy: 0
     bulkElements: 5

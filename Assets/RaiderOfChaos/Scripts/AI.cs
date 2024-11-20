@@ -156,6 +156,7 @@ namespace hyhy.RaidersOfChaos
 
             if (isBoss)
             {
+                m_healthBar.Show(false);
                 GUIManager.Ins.bossHpBar.Show(true);
                 GUIManager.Ins.bossHpBar.UpdateValue(m_curHp, m_curStat.CurHp);
             }
